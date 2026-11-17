@@ -9,6 +9,14 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23060d20'/%3E%3Cpath d='M35 15A14 14 0 1 0 37.5 27' fill='none' stroke='%23fff' stroke-width='4.2' stroke-linecap='round'/%3E%3Cpath d='M10 31C19 25 28 18 40 12' fill='none' stroke='%237d9bff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="preload" href="assets/js/land.bin" as="fetch" type="application/octet-stream" crossorigin>
+<script defer src="assets/vendor/gsap.min.js"></script>
+<script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+<script defer src="assets/vendor/lenis.min.js"></script>
+<script defer src="assets/js/globe.js"></script>
+<script defer src="assets/js/main.js"></script>
+<script defer src="assets/js/suite.js"></script>
+
 </head>
 <body>
 
@@ -62,13 +70,14 @@
       <a href="#solutions" class="btn btn-primary">Découvrir nos expertises</a>
       <a href="#contact" class="btn btn-ghost">Parler de votre projet</a>
     </div>
-    <p class="hero-offices">Bureaux à Varsovie et à Alger</p>
   </div>
-  <a href="#demo" class="spin-link" aria-label="Voir l'exemple en direct">
-    <svg viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ring1" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
-      <text><textPath href="#ring1" textLength="500" lengthAdjust="spacing">Voir l'exemple en direct ✦ Voir l'exemple en direct ✦ </textPath></text></svg>
-    <span class="spin-core" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
-  </a>
+</section>
+
+<!-- MANIFESTE -->
+<section class="manifesto" aria-label="Notre approche">
+  <div class="wrap">
+    <p class="mf-text" id="manifesto">Nous ne vendons pas un logiciel de plus. Nous construisons le vôtre, avec vos équipes, livré toutes les deux semaines, conforme aux règles de chaque pays où vous travaillez. Et il vous appartient.</p>
+  </div>
 </section>
 
 <!-- SOLUTIONS -->
@@ -76,30 +85,64 @@
   <div class="wrap">
     <div class="sec-top" data-reveal>
       <h2 class="display-2">Nos expertises</h2>
-      <p class="sec-lede">Nous ne vendons pas un logiciel unique. Nous construisons le vôtre, à partir de quatre domaines que nous maîtrisons, connectés entre eux et à vos outils existants.</p>
+      <p class="sec-lede">Quatre domaines que nous maîtrisons, connectés entre eux et à vos outils existants. Survolez-les pour voir à quoi ils ressemblent.</p>
     </div>
     <ul class="sol-list" data-reveal-list>
-      <li class="sol">
+      <li class="sol" data-pv="crm">
         <h3>CRM</h3>
         <p>Suivez chaque prospect du premier contact à la signature&nbsp;: pipeline, relances automatiques, prévisions de chiffre d'affaires.</p>
         <span class="sol-tags">Pipeline, relances, prévisions</span>
       </li>
-      <li class="sol">
+      <li class="sol" data-pv="inv">
         <h3>Comptabilité et facturation</h3>
         <p>Factures conformes aux règles de chaque pays, écritures passées automatiquement, rapprochement bancaire, clôtures plus rapides.</p>
         <span class="sol-tags">Factures, écritures, trésorerie</span>
       </li>
-      <li class="sol">
+      <li class="sol" data-pv="plan">
         <h3>Gestion de projet</h3>
         <p>Planifiez en sprints, suivez le temps passé et la rentabilité réelle de chaque projet, client par client.</p>
         <span class="sol-tags">Sprints, temps, rentabilité</span>
       </li>
-      <li class="sol">
+      <li class="sol" data-pv="code">
         <h3>Logiciel sur mesure</h3>
         <p>Quand aucun outil du marché ne colle à votre métier, nous construisons le vôtre, avec vous, et vous en restez propriétaire.</p>
         <span class="sol-tags">Web, mobile, intégrations</span>
       </li>
     </ul>
+  </div>
+  <div class="pv" id="pv" aria-hidden="true">
+    <div class="pv-panel" data-k="crm">
+      <div class="pv-head"><b>Pipeline</b><span>Novembre</span></div>
+      <div class="pv-kb">
+        <div><i>Prospect</i><em></em><em class="s"></em><em></em></div>
+        <div><i>Proposition</i><em class="s"></em><em></em></div>
+        <div><i>Gagné</i><em class="w"></em></div>
+      </div>
+      <em class="pv-fly"></em>
+    </div>
+    <div class="pv-panel" data-k="inv">
+      <div class="pv-head"><b>Facture FA-2026-046</b><span class="ok">Conforme KSeF</span></div>
+      <ul class="pv-lines"><li><span>Licence et intégration</span><b>12 400,00</b></li><li><span>Formation des équipes</span><b>1 800,00</b></li><li><span>TVA 23 %</span><b>3 266,00</b></li></ul>
+      <div class="pv-total"><span>Total TTC</span><b>17 466,00 PLN</b></div>
+    </div>
+    <div class="pv-panel" data-k="plan">
+      <div class="pv-head"><b>Projet Atlas</b><span>Sprint 3 sur 6</span></div>
+      <div class="pv-gantt">
+        <div><span>Cadrage</span><i style="--a:0;--b:18%"></i></div>
+        <div><span>Maquettes</span><i style="--a:12%;--b:26%"></i></div>
+        <div><span>Sprint 1</span><i style="--a:30%;--b:18%"></i></div>
+        <div><span>Sprint 2</span><i style="--a:46%;--b:18%"></i></div>
+        <div><span>Sprint 3</span><i class="now" style="--a:62%;--b:18%"></i></div>
+        <b class="pv-today"></b>
+      </div>
+    </div>
+    <div class="pv-panel" data-k="code">
+      <div class="pv-head"><b>facturation.ts</b><span>main</span></div>
+      <pre class="pv-code"><span class="k">const</span> facture = <span class="k">await</span> creerFacture(affaire);
+<span class="k">await</span> ksef.<span class="f">envoyer</span>(facture);
+compta.<span class="f">passerEcriture</span>(facture, <span class="s">'706'</span>);
+<span class="c">// livré au sprint 4, testé</span><span class="caret"></span></pre>
+    </div>
   </div>
 </section>
 
@@ -113,7 +156,7 @@
     </div>
   </div>
 
-  <div class="app" data-reveal id="app" aria-label="Démonstration interactive d'un outil de gestion développé par ABBOUTE">
+  <div class="app" id="app" aria-label="Démonstration interactive d'un outil de gestion développé par ABBOUTE">
     <div class="app-bar">
       <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="app-title">Outil de gestion <span>projet type</span></div>
@@ -184,7 +227,7 @@
 <!-- POURQUOI -->
 <section class="why">
   <div class="wrap">
-    <h2 class="why-title" data-reveal><span class="why-o">Pourquoi</span> <span>ABBOUTE</span></h2>
+    <h2 class="why-title"><span class="why-o">Pourquoi</span> <span>ABBOUTE</span></h2>
     <div class="why-grid" data-reveal-list>
       <article class="why-card"><h3>Un seul interlocuteur</h3><p>La même équipe conçoit, développe et maintient votre logiciel. Personne ne découvre votre dossier en cours de route.</p></article>
       <article class="why-card"><h3>Des progrès visibles</h3><p>Toutes les deux semaines, une version à tester. Vous savez toujours où en est le projet et ce qu'il a coûté.</p></article>
@@ -235,11 +278,5 @@
   <div class="wrap foot-base"><span>© 2026 ABBOUTE</span><span>Logiciels de gestion pour entreprises</span></div>
 </footer>
 
-<script src="assets/vendor/gsap.min.js"></script>
-<script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/vendor/lenis.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/globe.js" defer></script>
-<script src="assets/js/suite.js"></script>
 </body>
 </html>
