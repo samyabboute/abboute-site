@@ -3,183 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ABBOUTE</title>
-<meta name="description" content="ABBOUTE — Groupe. Deux entités, sept métiers. Europe & Algérie.">
+<title>ABBOUTE — Groupe</title>
+<meta name="description" content="ABBOUTE — un groupe, deux entités, sept métiers. Europe et Algérie.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-<div class="prog" id="prog" aria-hidden="true"></div>
 
-<!-- LOADER -->
-<div class="loader" id="loader">
-  <div class="loader-inner">
-    <div class="loader-logo">ABBOUTE</div>
-    <div class="loader-sub"><span id="loadpct">0</span></div>
-  </div>
-</div>
-
-<!-- NAV -->
-<header id="nav">
+<header class="nav" id="nav">
   <a href="#top" class="logo">ABBOUTE</a>
-  <nav class="links">
-    <a href="#groupe">Le groupe</a>
-    <a href="#entites">Entités</a>
-    <a href="#metiers">Métiers</a>
-    <a href="#contact">Contact</a>
+  <nav class="menu" id="menu">
+    <a href="#about">À propos</a>
+    <a href="#entities">Entités</a>
+    <a href="#sectors">Métiers</a>
+    <a href="#why">Pourquoi nous</a>
   </nav>
-  <a href="#contact" class="nav-pill">Nous écrire</a>
+  <a href="#contact" class="btn-nav">Nous contacter</a>
   <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-canvas" aria-hidden="true"><canvas id="mesh"></canvas></div>
+  <canvas id="city" class="hero-city" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow reveal-fade">Groupe privé · Europe &amp; Algérie · Depuis 2026</p>
     <h1 class="hero-title">
-      <span class="l"><span>Un héritage</span></span>
-      <span class="l"><span>qui se <em>construit.</em></span></span>
+      <span class="ln"><span>Nous bâtissons</span></span>
+      <span class="ln"><span>un groupe</span></span>
+      <span class="ln"><span class="blue">fait pour durer</span></span>
     </h1>
-    <p class="hero-lead reveal-fade delay">ABBOUTE réunit sept métiers sous une même signature. De la technologie à la table, nous concevons des entreprises faites pour traverser le temps.</p>
+    <p class="hero-sub">Deux entités. Sept métiers. Entre l'Europe et l'Algérie, ABBOUTE conçoit, développe et opère des entreprises.</p>
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-blue">Découvrir le groupe</a>
+      <a href="#contact" class="btn btn-line">Nous contacter</a>
+    </div>
   </div>
-  <div class="hero-bottom">
-    <a href="#groupe" class="hero-scroll reveal-fade delay2">
-      <span>Découvrir le groupe</span>
-      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </a>
-    <div class="hero-index reveal-fade delay2"><span>01 — 04</span></div>
+  <div class="hero-badge round" aria-hidden="true">
+    <svg viewBox="0 0 200 200"><defs><path id="c1" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#c1" textLength="488" lengthAdjust="spacing">Scroll down · Scroll down · Scroll down · </textPath></text></svg>
+    <span class="round-arrow">↓</span>
   </div>
 </section>
 
-<!-- GROUPE -->
-<section class="chapter" id="groupe">
-  <div class="chapter-head">
-    <span class="idx">01</span>
-    <span class="lbl">Le groupe</span>
-  </div>
-  <div class="statement">
-    <h2 class="big" data-lines>Nous ne courons pas après le temps. Nous bâtissons pour qu'il travaille&nbsp;pour&nbsp;nous.</h2>
-  </div>
-  <div class="group-cols">
-    <div class="gc reveal-up">
-      <h3>Un seul standard</h3>
-      <p>La même exigence anime chacun de nos métiers — qu'il s'agisse d'une ligne de code, d'un mur ou d'un plat. Le détail n'est jamais secondaire.</p>
-    </div>
-    <div class="gc reveal-up">
-      <h3>Le temps long</h3>
-      <p>Nous investissons pour durer, non pour l'effet d'annonce. Chaque décision est pensée sur des années, pas sur un trimestre.</p>
-    </div>
-    <div class="gc reveal-up">
-      <h3>Deux rives</h3>
-      <p>Entre l'Europe et l'Afrique du Nord, nous conjuguons l'ouverture des marchés internationaux et la connaissance intime du terrain.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ENTITES -->
-<section class="entities" id="entites">
-  <div class="chapter-head on-dark">
-    <span class="idx">02</span>
-    <span class="lbl">Les entités</span>
-  </div>
-  <div class="ent-wrap">
-    <article class="ent" data-tone="eu">
-      <div class="ent-canvas" aria-hidden="true"><canvas class="ent-mesh" data-seed="1"></canvas></div>
-      <div class="ent-body">
-        <div class="ent-geo"><i></i>Europe · Pologne</div>
-        <h3 class="ent-name">ABBOUTE<br><em>Europe</em></h3>
-        <p class="ent-text">Le moteur d'innovation du groupe. Technologie, communication et développement des marchés, pilotés depuis la Pologne.</p>
-        <div class="ent-foot"><span>Sp. z o.o.</span><span>Varsovie</span></div>
+<!-- ABOUT / STATEMENT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="crumb">À propos</div>
+    <div class="about-grid">
+      <h2 class="statement reveal">Nous sommes un groupe familial multi-secteurs, ancré entre deux continents.</h2>
+      <div class="about-side reveal">
+        <p>ABBOUTE réunit sous un même nom des entreprises qui partagent une culture commune : l'exigence, le temps long et l'attention au détail. La technologie est le pilier qui irrigue chacun de nos métiers.</p>
+        <a href="#why" class="link-arrow">Pourquoi nous <span>→</span></a>
       </div>
-    </article>
-    <article class="ent" data-tone="dz">
-      <div class="ent-canvas" aria-hidden="true"><canvas class="ent-mesh" data-seed="2"></canvas></div>
-      <div class="ent-body">
-        <div class="ent-geo"><i></i>Algérie · El Djazaïr</div>
-        <h3 class="ent-name">ABBOUTE<br><em>El Djazaïr</em></h3>
-        <p class="ent-text">Les racines et la force opérationnelle. Construction, restauration, automobile et agroalimentaire, au plus près du terrain.</p>
-        <div class="ent-foot"><span>SARL</span><span>Alger · Azazga</span></div>
+    </div>
+    <blockquote class="quote reveal">
+      <p>« Nous n'investissons pas pour l'effet d'annonce. Nous construisons des entreprises qui se transmettent. »</p>
+      <div class="round round-sm" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><path id="c2" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#c2" textLength="488" lengthAdjust="spacing">Leadership · Vision · Leadership · Vision · </textPath></text></svg>
       </div>
-    </article>
+    </blockquote>
   </div>
-</section>
-
-<!-- METIERS -->
-<section class="chapter metiers" id="metiers">
-  <div class="chapter-head">
-    <span class="idx">03</span>
-    <span class="lbl">Les métiers</span>
-  </div>
-  <div class="statement">
-    <h2 class="big" data-lines>Sept savoir-faire, une même main.</h2>
-  </div>
-  <ul class="met-list">
-    <li class="met reveal-up" data-entity="Europe">
-      <span class="met-n">01</span>
-      <div class="met-c"><h3>Technologie</h3><p>Logiciels, plateformes web &amp; mobiles, solutions numériques sur mesure. Le pilier qui irrigue le groupe entier.</p></div>
-      <span class="met-flag">Pilier</span>
-    </li>
-    <li class="met reveal-up" data-entity="El Djazaïr">
-      <span class="met-n">02</span>
-      <div class="met-c"><h3>Construction</h3><p>De la conception à la livraison. Résidentiel, aménagement, maîtrise d'œuvre — bâtir du solide.</p></div>
-      <span class="met-flag">El Djazaïr</span>
-    </li>
-    <li class="met reveal-up" data-entity="Europe">
-      <span class="met-n">03</span>
-      <div class="met-c"><h3>Communication</h3><p>Image de marque, stratégie digitale, création &amp; contenu. Construire des identités qui durent.</p></div>
-      <span class="met-flag">Europe</span>
-    </li>
-    <li class="met reveal-up" data-entity="El Djazaïr">
-      <span class="met-n">04</span>
-      <div class="met-c"><h3>Restauration</h3><p>Des concepts pensés autour du goût, de l'expérience, du produit. L'art de recevoir.</p></div>
-      <span class="met-flag">El Djazaïr</span>
-    </li>
-    <li class="met reveal-up" data-entity="El Djazaïr">
-      <span class="met-n">05</span>
-      <div class="met-c"><h3>Automobile</h3><p>Négoce, importation et services. L'accès aux marchés, l'exigence sur la qualité.</p></div>
-      <span class="met-flag">El Djazaïr</span>
-    </li>
-    <li class="met reveal-up" data-entity="Groupe">
-      <span class="met-n">06</span>
-      <div class="met-c"><h3>Achat multi-pays</h3><p>Sourcing international. Identifier, négocier, sécuriser les meilleures sources, d'un pays à l'autre.</p></div>
-      <span class="met-flag">Groupe</span>
-    </li>
-    <li class="met reveal-up" data-entity="El Djazaïr">
-      <span class="met-n">07</span>
-      <div class="met-c"><h3>Agroalimentaire</h3><p>Sélection et valorisation de produits d'exception. Du terroir à la table, avec soin.</p></div>
-      <span class="met-flag">El Djazaïr</span>
-    </li>
-  </ul>
 </section>
 
 <!-- NUMBERS -->
 <section class="numbers">
-  <div class="num reveal-up"><span class="num-v" data-to="2">0</span><span class="num-l">Entités, deux rives</span></div>
-  <div class="num reveal-up"><span class="num-v" data-to="7">0</span><span class="num-l">Métiers complémentaires</span></div>
-  <div class="num reveal-up"><span class="num-v inf">∞</span><span class="num-l">Horizon long terme</span></div>
+  <div class="wrap nums">
+    <div class="n reveal"><span class="n-v" data-to="2">0</span><span class="n-l">entités<br>Europe &amp; Algérie</span></div>
+    <div class="n reveal"><span class="n-v" data-to="7">0</span><span class="n-l">métiers<br>complémentaires</span></div>
+    <div class="n reveal"><span class="n-v">2</span><span class="n-l">continents<br>un seul standard</span></div>
+    <div class="n reveal"><span class="n-v">∞</span><span class="n-l">horizon<br>long terme</span></div>
+  </div>
+</section>
+
+<!-- ENTITIES -->
+<section class="entities" id="entities">
+  <div class="wrap">
+    <div class="crumb">Nos entités</div>
+    <h2 class="h2 reveal">Un groupe, deux ancrages.</h2>
+    <div class="ent-grid">
+      <article class="ent reveal">
+        <div class="ent-vis"><canvas class="mini-city" data-variant="eu"></canvas></div>
+        <div class="ent-body">
+          <div class="ent-tag"><span class="dot"></span>Europe · Pologne</div>
+          <h3>ABBOUTE Europe</h3>
+          <p>Le moteur d'innovation du groupe. Technologie, communication et développement des marchés européens.</p>
+          <div class="ent-meta"><span>Sp. z o.o.</span><span>Varsovie</span></div>
+        </div>
+      </article>
+      <article class="ent reveal">
+        <div class="ent-vis"><canvas class="mini-city" data-variant="dz"></canvas></div>
+        <div class="ent-body">
+          <div class="ent-tag"><span class="dot"></span>Algérie · El Djazaïr</div>
+          <h3>ABBOUTE El Djazaïr</h3>
+          <p>La force opérationnelle. Construction, restauration, automobile et agroalimentaire, au plus près du terrain.</p>
+          <div class="ent-meta"><span>SARL</span><span>Alger · Azazga</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="sectors" id="sectors">
+  <div class="wrap">
+    <div class="crumb">Nos métiers</div>
+    <div class="sec-head">
+      <h2 class="h2 reveal">Sept métiers,<br>une même exigence.</h2>
+      <p class="sec-lead reveal">Des activités complémentaires qui partagent outils, talents et savoir-faire.</p>
+    </div>
+    <div class="sec-list">
+      <div class="s reveal"><span class="s-n">01</span><h3>Technologie</h3><p>Logiciels, plateformes web &amp; mobiles, solutions sur mesure.</p><span class="s-e">Pilier</span></div>
+      <div class="s reveal"><span class="s-n">02</span><h3>Construction</h3><p>Conception et réalisation, résidentiel et aménagement.</p><span class="s-e">El Djazaïr</span></div>
+      <div class="s reveal"><span class="s-n">03</span><h3>Communication</h3><p>Branding, stratégie digitale, création et contenu.</p><span class="s-e">Europe</span></div>
+      <div class="s reveal"><span class="s-n">04</span><h3>Restauration</h3><p>Concepts pensés autour du goût et de l'expérience.</p><span class="s-e">El Djazaïr</span></div>
+      <div class="s reveal"><span class="s-n">05</span><h3>Automobile</h3><p>Négoce, importation et services automobiles.</p><span class="s-e">El Djazaïr</span></div>
+      <div class="s reveal"><span class="s-n">06</span><h3>Achat multi-pays</h3><p>Sourcing et approvisionnement international.</p><span class="s-e">Groupe</span></div>
+      <div class="s reveal"><span class="s-n">07</span><h3>Agroalimentaire</h3><p>Sélection et valorisation de produits d'exception.</p><span class="s-e">El Djazaïr</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-head">
+      <h2 class="why-title"><span class="outline">Pourquoi</span> nous</h2>
+      <div class="round round-md" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><path id="c3" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#c3" textLength="488" lengthAdjust="spacing">Advantages · Avantages · Advantages · Avantages · </textPath></text></svg>
+      </div>
+    </div>
+    <div class="why-grid">
+      <article class="w reveal">
+        <div class="w-num"><span>01</span><span class="ghost">01</span></div>
+        <h3>Vision internationale, ancrage local</h3>
+        <p>Une présence sur deux continents, portée par une connaissance intime de chaque marché et des relations de terrain.</p>
+      </article>
+      <article class="w reveal">
+        <div class="w-num"><span>02</span><span class="ghost">02</span></div>
+        <h3>Agilité</h3>
+        <p>Une structure familiale et privée qui permet une gouvernance efficace et des décisions rapides.</p>
+      </article>
+      <article class="w reveal">
+        <div class="w-num"><span>03</span><span class="ghost">03</span></div>
+        <h3>Investir pour durer</h3>
+        <p>Notre objectif : un impact positif et durable. Chaque décision est pensée sur des années, pas sur un trimestre.</p>
+      </article>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="contact-canvas" aria-hidden="true"><canvas id="meshC"></canvas></div>
-  <div class="contact-inner">
-    <span class="lbl on-dark">04 — Contact</span>
-    <h2 class="contact-h">Travaillons<br><em>ensemble.</em></h2>
-    <a href="mailto:contact@abboute.com" class="contact-mail">contact@abboute.com</a>
-    <div class="contact-locs">
-      <div><span>Europe</span>Varsovie, Pologne</div>
-      <div><span>Algérie</span>Alger · Azazga</div>
+  <div class="wrap contact-grid">
+    <div class="contact-vis reveal">
+      <canvas class="mini-city" data-variant="contact"></canvas>
+      <div class="round round-lg" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><path id="c4" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#c4" textLength="488" lengthAdjust="spacing">Contact us · Contactez-nous · Contact us · </textPath></text></svg>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <h2 class="h2">Contactez-nous</h2>
+      <p class="sec-lead">Un projet, un partenariat, une question — nous serions ravis d'échanger.</p>
+      <form onsubmit="event.preventDefault();this.classList.add('sent')">
+        <div class="field"><input required placeholder=" " id="f1"><label for="f1">Nom et prénom</label></div>
+        <div class="field"><input required type="email" placeholder=" " id="f2"><label for="f2">Adresse e-mail</label></div>
+        <div class="field"><input placeholder=" " id="f3"><label for="f3">Société</label></div>
+        <div class="field"><textarea required placeholder=" " rows="3" id="f4"></textarea><label for="f4">Votre message</label></div>
+        <button class="btn btn-blue" type="submit">Envoyer <span>→</span></button>
+        <p class="thanks">Merci ! Nous vous répondrons au plus vite.</p>
+      </form>
     </div>
   </div>
-  <footer class="footer">
-    <span class="logo">ABBOUTE</span>
-    <span>© 2026 — Groupe ABBOUTE</span>
-  </footer>
 </section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="foot-marquee" aria-hidden="true">
+    <div class="fm-track"><span>ABBOUTE</span><span>ABBOUTE</span><span>ABBOUTE</span><span>ABBOUTE</span><span>ABBOUTE</span><span>ABBOUTE</span></div>
+  </div>
+  <div class="wrap foot-grid">
+    <div class="foot-col">
+      <a href="#about">À propos</a><a href="#entities">Entités</a><a href="#sectors">Métiers</a><a href="#why">Pourquoi nous</a>
+    </div>
+    <div class="foot-col">
+      <span class="fh">Europe</span><span>ABBOUTE Europe Sp. z o.o.</span><span>Varsovie, Pologne</span>
+    </div>
+    <div class="foot-col">
+      <span class="fh">Algérie</span><span>ABBOUTE El Djazaïr SARL</span><span>Alger · Azazga</span>
+    </div>
+    <div class="foot-col">
+      <span class="fh">Contact</span><a href="mailto:contact@abboute.com">contact@abboute.com</a>
+    </div>
+  </div>
+  <div class="wrap foot-base">
+    <span>2026, ABBOUTE ©</span>
+    <span>Politique de confidentialité</span>
+  </div>
+</footer>
 
 <script src="assets/js/main.js"></script>
 </body>
