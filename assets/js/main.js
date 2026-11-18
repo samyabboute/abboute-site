@@ -2,7 +2,6 @@
 (function(){
 'use strict';
 var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-var fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 var body = document.body, gsap = window.gsap, ST = window.ScrollTrigger, mfTween = null;
 if(gsap && ST){ gsap.registerPlugin(ST); }
 if(gsap && !reduce) document.documentElement.classList.add('js-reveal');
@@ -32,7 +31,7 @@ if(window.Lenis && gsap && !reduce){
 /* Navigation : couleur selon la section, masquée en descendant, section active */
 var nav = document.getElementById('nav'), links = document.getElementById('navLinks'), burger = document.getElementById('burger');
 var hero = document.querySelector('.hero'), bar = document.getElementById('progress'), mob = document.getElementById('mobCta');
-var darkSecs = [].slice.call(document.querySelectorAll('.sec-ink, .sec-blue, .manifesto, .day, .footer'));
+var darkSecs = [].slice.call(document.querySelectorAll('.sec-ink, .sec-blue, .manifesto, .footer'));
 var spy = [].slice.call(links.querySelectorAll('a[href^="#"]:not(.btn)')).map(function(a){ return { a: a, s: document.querySelector(a.getAttribute('href')) }; });
 var contact = document.getElementById('contact'), lastY = 0;
 function onScroll(){
@@ -50,15 +49,15 @@ function onScroll(){
   var cur = null;
   spy.forEach(function(o){ if(o.s && o.s.getBoundingClientRect().top < innerHeight * 0.4) cur = o; });
   spy.forEach(function(o){ o.a.classList.toggle('active', o === cur); });
-  if(mob){ var cr = contact.getBoundingClientRect(), dr = document.getElementById('day').getBoundingClientRect(); mob.classList.toggle('show', pastHero && cr.top > innerHeight * 0.6 && !(dr.top < innerHeight && dr.bottom > 0)); }
+  if(mob){ var cr = contact.getBoundingClientRect(); mob.classList.toggle('show', pastHero && cr.top > innerHeight * 0.6); }
 }
 addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-function closeMenu(){ links.classList.remove('open'); nav.classList.remove('open-menu'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Ouvrir le menu'); body.style.overflow = ''; if(window.lenis) lenis.start(); }
+function closeMenu(){ links.classList.remove('open'); nav.classList.remove('open-menu'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', window.NX ? NX.t('Ouvrir le menu','Open menu','فتح القائمة') : 'Ouvrir le menu'); body.style.overflow = ''; if(window.lenis) lenis.start(); }
 burger.addEventListener('click', function(){
   if(links.classList.contains('open')) return closeMenu();
   links.classList.add('open'); nav.classList.add('open-menu'); nav.classList.remove('hide');
-  burger.setAttribute('aria-expanded', 'true'); burger.setAttribute('aria-label', 'Fermer le menu');
+  burger.setAttribute('aria-expanded', 'true'); burger.setAttribute('aria-label', window.NX ? NX.t('Fermer le menu','Close menu','إغلاق القائمة') : 'Fermer le menu');
   body.style.overflow = 'hidden'; if(window.lenis) lenis.stop();
 });
 links.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
@@ -92,33 +91,6 @@ function splitManifesto(){
 }
 addEventListener('nx:lang', function(){ splitManifesto(); if(ST) ST.refresh(); });
 
-/* Une journée avec Nexus : l'horloge avance, le ciel change */
-var day = document.getElementById('day');
-if(day){
-  var scenes = [].slice.call(day.querySelectorAll('.scene')), clock = document.getElementById('dayClock'), rail = document.getElementById('dayRail');
-  var pin = day.querySelector('.day-pin');
-  var sky = [[14,22,48],[31,59,255],[28,48,200],[30,28,70],[11,13,18]];
-  var mins = scenes.map(function(s){ var p = s.dataset.time.split(':'); return +p[0] * 60 + +p[1]; });
-  var cur = 0, shownMin = mins[0], tw = { v: mins[0] };
-  var fmt = function(v){ v = Math.round(v); return String(Math.floor(v / 60)).padStart(2, '0') + ':' + String(v % 60).padStart(2, '0'); };
-  var updDay = function(){
-    if(reduce) return;
-    var r = day.getBoundingClientRect(), total = day.offsetHeight - innerHeight;
-    var p = Math.max(0, Math.min(1, -r.top / total));
-    var f = p * (sky.length - 1), a = Math.floor(f), b = Math.min(sky.length - 1, a + 1), q = f - a;
-    var c = sky[a].map(function(x, j){ return Math.round(x + (sky[b][j] - x) * q); });
-    pin.style.background = 'rgb(' + c.join(',') + ')';
-    if(rail) rail.style.transform = 'scaleX(' + p + ')';
-    var idx = Math.min(scenes.length - 1, Math.floor(p * scenes.length * 0.999));
-    if(idx !== cur){
-      scenes[cur].classList.remove('on'); scenes[idx].classList.add('on'); cur = idx;
-      if(gsap){ gsap.to(tw, { v: mins[idx], duration: 0.9, ease: 'power2.inOut', onUpdate: function(){ clock.textContent = fmt(tw.v); } }); }
-      else clock.textContent = scenes[idx].dataset.time;
-    }
-  };
-  addEventListener('scroll', updDay, { passive: true }); addEventListener('resize', updDay); updDay();
-}
-
 /* Méthode : la ligne avance avec la lecture */
 var steps = document.getElementById('steps');
 if(steps){
@@ -149,40 +121,61 @@ document.querySelectorAll('.svc-head').forEach(function(btn){
   });
 });
 
-/* Services : aperçu d'interface qui suit le curseur (ordinateur) ou intégré (mobile) */
-var pv = document.getElementById('pv'), svcs = document.querySelectorAll('.svc[data-pv]');
-if(pv && svcs.length){
-  if(fine && innerWidth > 900 && gsap){
-    var xTo = gsap.quickTo(pv, 'x', { duration: 0.5, ease: 'power3' }), yTo = gsap.quickTo(pv, 'y', { duration: 0.5, ease: 'power3' });
-    var shown = false;
-    gsap.set(pv, { scale: 0.85 });
-    var place = function(e){ return { x: Math.min(e.clientX + 26, innerWidth - 340), y: Math.max(14, Math.min(e.clientY - 102, innerHeight - 220)) }; };
-    svcs.forEach(function(s){
-      s.addEventListener('pointerenter', function(e){
-        pv.querySelectorAll('.pv-panel').forEach(function(p){ p.classList.toggle('on', p.dataset.k === s.dataset.pv); });
-        if(!shown){ var q = place(e); gsap.set(pv, { x: q.x, y: q.y }); }
-        shown = true; gsap.to(pv, { autoAlpha: 1, scale: 1, duration: 0.4, ease: 'power3.out', overwrite: 'auto' });
-      });
-      s.addEventListener('pointermove', function(e){ var q = place(e); xTo(q.x); yTo(q.y); });
+/* Aujourd'hui / Avec Nexus : bascule, puis passe seul à « Avec Nexus » à la première lecture */
+var ba = document.getElementById('avant-apres');
+if(ba){
+  var baBtns = ba.querySelectorAll('[data-ba]'), touched = false;
+  var setBA = function(after){
+    ba.classList.toggle('is-after', after);
+    baBtns.forEach(function(b){ b.setAttribute('aria-pressed', String((b.dataset.ba === 'after') === after)); });
+    ba.querySelectorAll('.ba-before').forEach(function(f){ f.setAttribute('aria-hidden', String(after)); });
+    ba.querySelectorAll('.ba-after').forEach(function(f){ f.setAttribute('aria-hidden', String(!after)); });
+  };
+  baBtns.forEach(function(b){ b.addEventListener('click', function(){ touched = true; setBA(b.dataset.ba === 'after'); }); });
+  var io = new IntersectionObserver(function(en){
+    if(en[0].isIntersecting){ io.disconnect(); setTimeout(function(){ if(!touched) setBA(true); }, reduce ? 0 : 1400); }
+  }, { threshold: 0.45 });
+  io.observe(document.getElementById('baGrid'));
+}
+
+/* Galerie : onglets, défilement automatique avec barre de progression */
+var gal = document.getElementById('gallery');
+if(gal){
+  var tabs = [].slice.call(gal.querySelectorAll('[role=tab]')), panes = [].slice.call(gal.querySelectorAll('.pane'));
+  var gi = 0, auto = !reduce, seen = false, hover = false, t0g = 0, DUR = 6500;
+  var select = function(i, focus){
+    gi = (i + tabs.length) % tabs.length;
+    tabs.forEach(function(t, j){ var on = j === gi; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1; t.querySelector('.tab-bar i').style.transform = 'scaleX(0)'; });
+    panes.forEach(function(p, j){ p.classList.toggle('on', j === gi); });
+    if(focus) tabs[gi].focus();
+    t0g = performance.now();
+  };
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ auto = false; select(i); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowDown' || e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? -1 : 0;
+      if(document.documentElement.dir === 'rtl' && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) d = -d;
+      if(d){ e.preventDefault(); auto = false; select(gi + d, true); }
     });
-    document.querySelector('.svc-list').addEventListener('pointerleave', function(){
-      shown = false; gsap.to(pv, { autoAlpha: 0, scale: 0.85, duration: 0.25, ease: 'power2.in', overwrite: 'auto' });
-    });
-  } else {
-    svcs.forEach(function(s){
-      var src = pv.querySelector('.pv-panel[data-k="' + s.dataset.pv + '"]'); if(!src) return;
-      var box = document.createElement('div'); box.className = 'pv-inline'; box.setAttribute('aria-hidden', 'true');
-      box.appendChild(src.cloneNode(true)); s.querySelector('.svc-body').appendChild(box);
-    });
-    pv.remove();
-  }
+  });
+  gal.addEventListener('pointerenter', function(){ hover = true; });
+  gal.addEventListener('pointerleave', function(){ hover = false; t0g = performance.now() - (parseFloat(tabs[gi].querySelector('.tab-bar i').dataset.p || 0) * DUR); });
+  new IntersectionObserver(function(en){ seen = en[0].isIntersecting; if(seen) t0g = performance.now(); }, { threshold: 0.3 }).observe(gal);
+  (function tick(){
+    requestAnimationFrame(tick);
+    if(!auto || !seen || hover || document.hidden) return;
+    var p = Math.min(1, (performance.now() - t0g) / DUR), bar = tabs[gi].querySelector('.tab-bar i');
+    bar.style.transform = 'scaleX(' + p + ')'; bar.dataset.p = p;
+    if(p >= 1) select(gi + 1);
+  })();
 }
 
 /* Contact : copier l'adresse e-mail */
 var cm = document.getElementById('copyMail');
 if(cm) cm.addEventListener('click', function(){
   var tag = cm.querySelector('span'), mail = cm.dataset.mail;
-  var done = function(){ tag.textContent = 'Copiée'; setTimeout(function(){ tag.textContent = 'Copier'; }, 1800); };
+  var T = function(a,b,c){ return window.NX ? NX.t(a,b,c) : a; };
+  var done = function(){ tag.textContent = T('Copiée', 'Copied', 'تم النسخ'); setTimeout(function(){ tag.textContent = T('Copier', 'Copy', 'نسخ'); }, 1800); };
   if(navigator.clipboard) navigator.clipboard.writeText(mail).then(done, function(){ location.href = 'mailto:' + mail; });
   else location.href = 'mailto:' + mail;
 });

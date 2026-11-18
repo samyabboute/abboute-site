@@ -4,13 +4,13 @@
 var form = document.getElementById('cfg');
 if(!form) return;
 var gsap = window.gsap, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-var t = function(en, fr){ return (window.NX && NX.lang === 'fr') ? fr : en; };
+var t = function(fr, en, ar){ return window.NX ? NX.t(fr, en, ar) : fr; };
 var steps = [].slice.call(form.querySelectorAll('.cfg-step'));
 var order = ['need','stage','size','when','who','done'];
 var prog = document.getElementById('cfgProg'), count = document.getElementById('cfgCount');
 var back = document.getElementById('cfgBack'), err = document.getElementById('cfgErr');
 var brief = document.getElementById('brief'), bar = document.getElementById('briefBar');
-var info = { name: '', email: '', company: '', message: '' };
+var info = { name: '', email: '', phone: '', company: '' };
 var cur = 0, busy = false, inView = false, ready = false;
 
 var d = new Date();
@@ -31,12 +31,12 @@ function paint(flashKey){
   ['need','stage','size','when','who'].forEach(function(key){
     var row = brief.querySelector('[data-b="' + key + '"]'), dd = row.querySelector('dd');
     var v = a[key];
-    dd.textContent = v || t('To be defined', 'À préciser');
+    dd.textContent = v || t('À préciser', 'To be defined', 'يُحدَّد لاحقاً');
     row.classList.toggle('set', !!v); if(v) filled++;
     if(key === flashKey && v){ row.classList.remove('flash'); void row.offsetWidth; row.classList.add('flash'); }
   });
   bar.style.width = (filled / 5 * 100) + '%';
-  document.getElementById('briefState').textContent = ready ? t('Ready', 'Prêt') : t('In progress', 'En cours');
+  document.getElementById('briefState').textContent = ready ? t('Prêt', 'Ready', 'جاهز') : t('En cours', 'In progress', 'قيد الإعداد');
 }
 
 function show(i, dir){
@@ -59,7 +59,7 @@ function show(i, dir){
 function ui(){
   var isDone = order[cur] === 'done';
   prog.style.width = ((isDone ? 5 : cur) / 5 * 100) + '%';
-  count.textContent = isDone ? t('Done', 'Terminé') : (Math.min(cur, 4) + 1) + ' / 5';
+  count.textContent = isDone ? t('Terminé', 'Done', 'تمّ') : (Math.min(cur, 4) + 1) + ' / 5';
   back.disabled = cur === 0;
   form.classList.toggle('is-done', isDone);
 }
@@ -75,7 +75,7 @@ needBtn.addEventListener('click', next);
 ['stage','size','when'].forEach(function(key){
   steps[order.indexOf(key)].addEventListener('change', function(){ paint(key); setTimeout(next, reduce ? 0 : 240); });
 });
-['name','email','company','message'].forEach(function(key){
+['name','email','phone','company'].forEach(function(key){
   var el = form.elements[key];
   el.addEventListener('input', function(){
     info[key] = el.value.trim(); el.closest('.field').classList.remove('err');
@@ -88,14 +88,14 @@ function text(){
   var a = answers();
   return [
     'Brief ' + ref, '',
-    t('Need: ', 'Besoin : ') + (a.need || '-'),
-    t('Stage: ', 'Situation : ') + (a.stage || '-'),
-    t('Company size: ', 'Entreprise : ') + (a.size || '-'),
-    t('Start: ', 'Démarrage : ') + (a.when || '-'), '',
-    t('Contact: ', 'Contact : ') + info.name + (info.company ? ', ' + info.company : ''),
-    t('Email: ', 'E-mail : ') + info.email,
-    info.message ? '\n' + t('Project: ', 'Projet : ') + info.message : ''
-  ].join('\n').trim();
+    t('Besoin : ', 'Need: ', 'الحاجة: ') + (a.need || '-'),
+    t('Situation : ', 'Stage: ', 'الوضعية: ') + (a.stage || '-'),
+    t('Taille : ', 'Company size: ', 'حجم المؤسسة: ') + (a.size || '-'),
+    t('Démarrage : ', 'Start: ', 'الانطلاق: ') + (a.when || '-'), '',
+    t('Contact : ', 'Contact: ', 'الاتصال: ') + info.name + (info.company ? ', ' + info.company : ''),
+    t('E-mail : ', 'Email: ', 'البريد: ') + info.email,
+    info.phone ? t('Téléphone : ', 'Phone: ', 'الهاتف: ') + info.phone : ''
+  ].filter(function(x, i, arr){ return x !== '' || (arr[i-1] !== '' && i < arr.length - 1); }).join('\n').trim();
 }
 function finalize(){
   var a = answers();
@@ -111,9 +111,9 @@ form.addEventListener('submit', function(e){
   if(!/^\S+@\S+\.\S+$/.test(info.email)) bad.push('email');
   bad.forEach(function(key){ form.elements[key].closest('.field').classList.add('err'); });
   if(bad.length){
-    err.textContent = bad.length === 2 ? t('Please add your name and a valid email address.', 'Indiquez votre nom et une adresse e-mail valide.')
-      : bad[0] === 'name' ? t('Please add your name.', 'Indiquez votre nom.')
-      : t('Please add a valid email address, for example name@company.com.', 'Indiquez une adresse e-mail valide, par exemple nom@entreprise.com.');
+    err.textContent = bad.length === 2 ? t('Indiquez votre nom et une adresse e-mail valide.', 'Please add your name and a valid email address.', 'يرجى إدخال اسمكم وبريد إلكتروني صحيح.')
+      : bad[0] === 'name' ? t('Indiquez votre nom.', 'Please add your name.', 'يرجى إدخال اسمكم.')
+      : t('Indiquez une adresse e-mail valide, par exemple nom@entreprise.dz.', 'Please add a valid email address, for example name@company.com.', 'يرجى إدخال بريد إلكتروني صحيح، مثل name@company.dz.');
     form.elements[bad[0]].focus(); return;
   }
   err.textContent = '';
@@ -123,7 +123,7 @@ form.addEventListener('submit', function(e){
 
 document.getElementById('cfgCopy').addEventListener('click', function(){
   var b = this, txt = text();
-  var ok = function(){ b.textContent = t('Brief copied', 'Brief copié'); setTimeout(function(){ b.textContent = t('Copy the brief', 'Copier le brief'); }, 2000); };
+  var ok = function(){ b.textContent = t('Brief copié', 'Brief copied', 'تم نسخ الملخّص'); setTimeout(function(){ b.textContent = t('Copier le brief', 'Copy the brief', 'نسخ الملخّص'); }, 2000); };
   if(navigator.clipboard) navigator.clipboard.writeText(txt).then(ok, function(){});
   else { var a = document.createElement('textarea'); a.value = txt; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); ok(); } catch(x){} a.remove(); }
 });
