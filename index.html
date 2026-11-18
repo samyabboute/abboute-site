@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nexus, groupe informatique : conseil, logiciels, formation, externalisation et matériel</title>
-<meta name="description" content="Nexus est un groupe informatique européen installé à Varsovie et à Alger. Conseil, conception de logiciels, formation, externalisation et matériel : un seul partenaire pour moderniser et digitaliser votre entreprise.">
-<meta name="theme-color" content="#05070d">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2305070d'/%3E%3Cpath d='M14 34V14l20 20V14' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='14' r='4' fill='%2322d3ee'/%3E%3Ccircle cx='34' cy='34' r='4' fill='%236c63ff'/%3E%3C/svg%3E">
+<title>Nexus, groupe de services informatiques à Varsovie et Alger</title>
+<meta name="description" content="Nexus est un groupe de services informatiques avec des centres à Varsovie et à Alger : conseil, ingénierie logicielle, formation, infogérance et équipement pour les entreprises européennes.">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230b0d12'/%3E%3Cpath d='M14 34V14l20 20V14' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='34' cy='14' r='4.5' fill='%231f3bff'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/app.css">
 <link rel="preload" href="assets/js/land.bin" as="fetch" type="application/octet-stream" crossorigin>
 <script defer src="assets/vendor/gsap.min.js"></script>
 <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
@@ -17,27 +18,22 @@
 <script defer src="assets/js/main.js"></script>
 <script defer src="assets/js/suite.js"></script>
 <script defer src="assets/js/brief.js"></script>
-
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="mark" viewBox="0 0 48 48">
     <path d="M14 34V14l20 20V14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="14" cy="14" r="4" fill="#22d3ee"/><circle cx="34" cy="34" r="4" fill="#6c63ff"/>
+    <circle cx="34" cy="14" r="4.5" fill="#1f3bff"/>
   </symbol>
 </svg>
 
-<!-- Chargement -->
 <div class="loader" id="loader" aria-hidden="true">
-  <svg class="loader-mark" viewBox="0 0 48 48">
-    <path class="lm-ring" d="M14 34V14l20 20V14"/>
-    <circle class="lm-n1" cx="14" cy="14" r="4"/><circle class="lm-n2" cx="34" cy="34" r="4"/>
-  </svg>
-  <div class="loader-word">nexus</div>
+  <svg class="loader-mark" viewBox="0 0 48 48"><path class="lm-path" d="M14 34V14l20 20V14"/><circle class="lm-node" cx="34" cy="14" r="4.5"/></svg>
 </div>
 
 <a class="skip" href="#contenu">Aller au contenu</a>
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
 
 <header class="nav" id="nav">
   <a href="#top" class="brand" aria-label="Nexus, accueil">
@@ -45,74 +41,92 @@
     <span class="brand-word">nexus</span>
   </a>
   <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-    <a href="#metiers">Métiers</a>
+    <a href="#services">Services</a>
+    <a href="#engagement">Engagement</a>
     <a href="#methode">Méthode</a>
-    <a href="#demo">Réalisation</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#contact" class="nav-cta">Lancer votre projet</a>
+    <a href="#realisation">Réalisation</a>
+    <a href="#technologies">Technologies</a>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta">Décrire mon projet</a>
   </nav>
   <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
 </header>
 
 <main id="contenu">
 
-<!-- HERO -->
 <section class="hero" id="top">
-  <canvas class="globe" id="globe" aria-label="Globe interactif reliant les bureaux Nexus d'Alger et de Varsovie à Paris et Berlin. Faites-le tourner en le faisant glisser." role="img"></canvas>
+  <canvas class="globe" id="globe" role="img" aria-label="Globe reliant les centres Nexus de Varsovie et d'Alger à Paris et Berlin. Faites-le tourner en le faisant glisser."></canvas>
   <div class="globe-labels" id="globeLabels" aria-hidden="true"></div>
   <div class="hero-inner">
     <h1 class="hero-title">
-      <span class="hl"><span>Nous modernisons</span></span>
-      <span class="hl"><span>les entreprises</span></span>
-      <span class="hl"><span>par la technologie.</span></span>
+      <span class="hl"><span>Services informatiques</span></span>
+      <span class="hl"><span>pour les entreprises</span></span>
+      <span class="hl"><span>qui se modernisent.</span></span>
     </h1>
-    <p class="hero-lede">Nexus est un groupe informatique européen. Conseil, logiciels, formation, externalisation et matériel&nbsp;: un seul partenaire pour digitaliser votre entreprise, de la stratégie à la mise en service.</p>
+    <p class="hero-lede">Nexus conseille, développe, forme et équipe les entreprises européennes, avec des centres de services à Varsovie et à Alger.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Lancer votre projet</a>
-      <a href="#metiers" class="btn btn-ghost">Nos métiers</a>
+      <a href="#contact" class="btn btn-primary">Décrire mon projet <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5"/></svg></a>
+      <a href="#services" class="btn btn-secondary">Voir nos services</a>
     </div>
   </div>
+  <dl class="hero-facts">
+    <div><dt>Centres de services</dt><dd>Varsovie et Alger</dd></div>
+    <div><dt>Langues de travail</dt><dd>Français, anglais, polonais, arabe</dd></div>
+    <div><dt>Décalage avec Paris</dt><dd>Aucun, ou une heure l'été</dd></div>
+  </dl>
 </section>
 
-<!-- MANIFESTE -->
 <section class="manifesto" aria-label="Notre approche">
   <div class="wrap">
-    <p class="mf-text" id="manifesto">Moderniser une entreprise ne se résume pas à acheter un logiciel. Nous conseillons, construisons, formons et équipons vos équipes, jusqu'à ce que le changement se voie dans leur travail de chaque jour.</p>
+    <p class="mf-text" id="manifesto">Nous ne vendons pas la technologie pour elle-même. Nous partons de votre activité, nous choisissons les bons outils, nous les mettons en place avec vos équipes, et nous restons là après la mise en service.</p>
   </div>
 </section>
 
-<!-- METIERS -->
-<section class="solutions" id="metiers">
-  <div class="wrap">
-    <div class="sec-top" data-reveal>
-      <h2 class="display-2">Cinq métiers, un seul groupe.</h2>
-      <p class="sec-lede">Tout ce qu'il faut pour moderniser une entreprise, réuni chez un même partenaire. Survolez un métier pour voir ce que nous livrons.</p>
+<section class="services sec" id="services">
+  <div class="wrap services-grid">
+    <div class="sec-side" data-reveal>
+      <h2 class="h2">Cinq métiers sous un même toit</h2>
+      <p class="lede">Un interlocuteur unique pour le conseil, les logiciels, la formation, l'exploitation et le matériel. Ouvrez un métier pour voir ce que nous livrons.</p>
     </div>
-    <ul class="sol-list" data-reveal-list>
-      <li class="sol" data-pv="conseil">
-        <h3>Conseil et transformation digitale</h3>
-        <p>Diagnostic de maturité, feuille de route, choix des outils. Nous vous disons quoi moderniser en premier, et pourquoi.</p>
-        <span class="sol-tags">Audit, feuille de route, choix des outils</span>
+    <ul class="svc-list" data-reveal-list>
+      <li class="svc" data-pv="conseil">
+        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-conseil">
+          <span class="svc-title">Conseil et transformation numérique</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <p class="svc-lede">Nous mesurons où en est votre entreprise et nous fixons les priorités, avant d'engager le moindre budget.</p>
+        <div class="svc-body" id="svc-conseil" hidden><ul><li>Diagnostic de maturité numérique</li><li>Feuille de route chiffrée sur 12 à 36 mois</li><li>Choix et appels d'offres de logiciels</li><li>Pilotage de projets de transformation</li></ul></div>
       </li>
-      <li class="sol" data-pv="code">
-        <h3>Conception de logiciels</h3>
-        <p>CRM, ERP, applications web et mobiles, intégrations. Nous concevons et développons les outils qui manquent à votre métier.</p>
-        <span class="sol-tags">Web, mobile, CRM, ERP</span>
+      <li class="svc" data-pv="code">
+        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-code">
+          <span class="svc-title">Ingénierie logicielle</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <p class="svc-lede">Applications web et mobiles, CRM, ERP, intégrations entre vos outils. Nous concevons, développons et maintenons.</p>
+        <div class="svc-body" id="svc-code" hidden><ul><li>Applications métier sur mesure</li><li>Déploiement et paramétrage de CRM et d'ERP</li><li>Connecteurs et API entre vos systèmes</li><li>Tierce maintenance applicative (TMA)</li></ul></div>
       </li>
-      <li class="sol" data-pv="formation">
-        <h3>Formation</h3>
-        <p>Vos équipes adoptent vraiment les nouveaux outils&nbsp;: formations sur site ou à distance, parcours par métier, supports remis.</p>
-        <span class="sol-tags">Sur site, à distance, par métier</span>
+      <li class="svc" data-pv="formation">
+        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-formation">
+          <span class="svc-title">Formation et conduite du changement</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <p class="svc-lede">Un outil ne sert que s'il est adopté. Nous formons vos équipes, métier par métier, sur site ou à distance.</p>
+        <div class="svc-body" id="svc-formation" hidden><ul><li>Parcours de formation par métier</li><li>Formation Microsoft 365, Power BI, ERP et CRM</li><li>Supports et guides remis à vos équipes</li><li>Ambassadeurs internes et suivi de l'adoption</li></ul></div>
       </li>
-      <li class="sol" data-pv="outsourcing">
-        <h3>Externalisation</h3>
-        <p>Équipes de développement dédiées, infogérance, support utilisateurs. Vous gagnez en capacité sans recruter.</p>
-        <span class="sol-tags">Équipes dédiées, infogérance, support</span>
+      <li class="svc" data-pv="outsourcing">
+        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-outsourcing">
+          <span class="svc-title">Centres de services et infogérance</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <p class="svc-lede">Nos équipes de Varsovie et d'Alger prennent en charge une partie de votre informatique, avec des engagements de service écrits.</p>
+        <div class="svc-body" id="svc-outsourcing" hidden><ul><li>Équipes de développement dédiées (nearshore)</li><li>Support utilisateurs et centre d'assistance</li><li>Infogérance des serveurs et du cloud</li><li>Supervision et sauvegardes</li></ul></div>
       </li>
-      <li class="sol" data-pv="materiel">
-        <h3>Matériel et infrastructure</h3>
-        <p>Postes de travail, réseaux, serveurs et cloud. Nous fournissons, installons et maintenons votre parc informatique.</p>
-        <span class="sol-tags">Postes, réseaux, serveurs, cloud</span>
+      <li class="svc" data-pv="materiel">
+        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-materiel">
+          <span class="svc-title">Équipement et infrastructure</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <p class="svc-lede">Postes de travail, réseaux, serveurs et cloud : nous conseillons, fournissons, installons et entretenons votre parc.</p>
+        <div class="svc-body" id="svc-materiel" hidden><ul><li>Postes de travail et périphériques</li><li>Réseaux, Wi-Fi et sécurité</li><li>Serveurs, stockage et migration vers le cloud</li><li>Gestion et renouvellement du parc</li></ul></div>
       </li>
     </ul>
   </div>
@@ -164,33 +178,40 @@ tableau.<span class="f">actualiser</span>(<span class="s">'ventes'</span>);
   </div>
 </section>
 
-<!-- METHODE -->
-<section class="method" id="methode">
+<section class="engagement sec sec-stone" id="engagement">
   <div class="wrap">
-    <div class="sec-top" data-reveal>
-      <h2 class="display-2">La rigueur d'un cabinet de conseil, l'exécution d'un intégrateur.</h2>
-      <p class="sec-lede">Cinq étapes, des résultats visibles à chacune. Vous savez toujours où en est le projet et ce qu'il a coûté.</p>
+    <div class="sec-head" data-reveal>
+      <h2 class="h2">Quatre façons de travailler ensemble</h2>
+      <p class="lede">Les mêmes modèles que les grandes ESN européennes, choisis selon votre besoin et votre budget.</p>
+    </div>
+    <div class="eng-grid" data-reveal-list><article class="eng"><h3>Projet au forfait</h3><p>Un périmètre, un prix et une date de livraison fixés à l'avance. Nous portons le risque du résultat.</p><p class="eng-fit"><span>Adapté à</span> Nouveau logiciel, migration, déploiement d'ERP</p></article><article class="eng"><h3>Équipe dédiée</h3><p>Une équipe de développeurs, testeurs et chefs de projet à Varsovie ou à Alger, qui travaille avec vos méthodes et vos outils.</p><p class="eng-fit"><span>Adapté à</span> Produit en évolution continue, besoins durables</p></article><article class="eng"><h3>Assistance technique</h3><p>Un ou plusieurs experts rejoignent vos équipes pour la durée nécessaire, sur site ou à distance.</p><p class="eng-fit"><span>Adapté à</span> Renfort ponctuel, compétence rare</p></article><article class="eng"><h3>Infogérance</h3><p>Nous exploitons et maintenons tout ou partie de votre informatique, avec des délais d'intervention contractuels.</p><p class="eng-fit"><span>Adapté à</span> Support, serveurs, parc informatique</p></article></div>
+  </div>
+</section>
+
+<section class="method sec" id="methode">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 class="h2">Comment se déroule un projet</h2>
+      <p class="lede">La démarche d'un cabinet de conseil, l'exécution d'un intégrateur. À chaque étape, vous savez où en est le projet et ce qu'il a coûté.</p>
     </div>
     <ol class="steps" id="steps" data-reveal-list>
-      <li class="step"><span class="step-n">1</span><h3>Diagnostic</h3><p>Nous observons vos processus, vos outils et vos équipes pour mesurer où vous en êtes.</p></li>
-      <li class="step"><span class="step-n">2</span><h3>Feuille de route</h3><p>Les chantiers classés par impact et par coût, avec un budget et un calendrier clairs.</p></li>
-      <li class="step"><span class="step-n">3</span><h3>Mise en œuvre</h3><p>Logiciels, matériel, intégrations&nbsp;: livrés par étapes et testés avec vous.</p></li>
-      <li class="step"><span class="step-n">4</span><h3>Formation</h3><p>Chaque équipe est formée à ses nouveaux outils, supports à l'appui.</p></li>
-      <li class="step"><span class="step-n">5</span><h3>Accompagnement</h3><p>Support, maintenance et améliorations continues, avec des engagements écrits.</p></li>
+      <li class="step"><span class="step-n">1</span><h3>Diagnostic</h3><p>Nous observons vos processus, vos outils et vos équipes pour mesurer le point de départ.</p></li>
+      <li class="step"><span class="step-n">2</span><h3>Feuille de route</h3><p>Les chantiers classés par impact et par coût, avec un budget et un calendrier.</p></li>
+      <li class="step"><span class="step-n">3</span><h3>Mise en œuvre</h3><p>Logiciels, matériel et intégrations livrés par étapes, testés avec vous.</p></li>
+      <li class="step"><span class="step-n">4</span><h3>Formation</h3><p>Chaque équipe apprend ses nouveaux outils, supports à l'appui.</p></li>
+      <li class="step"><span class="step-n">5</span><h3>Exploitation</h3><p>Support, maintenance et évolutions, avec des engagements de service écrits.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- DEMO -->
-<section class="demo" id="demo">
-  <div class="wrap demo-head" data-reveal>
-    <h2 class="display-2">Un logiciel que nous livrons, à essayer ici.</h2>
-    <div class="demo-intro">
-      <p>Un outil de gestion comme ceux que nous développons pour nos clients. Faites glisser une affaire jusqu'à <strong>Gagné</strong>&nbsp;: la facture se crée, l'écriture comptable suit et le tableau de bord se met à jour.</p>
-      <p class="kbd-hint">Astuce&nbsp;: <kbd>Ctrl</kbd> + <kbd>K</kbd> ouvre la recherche.</p>
+<section class="demo sec sec-ink" id="realisation">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 class="h2">Un logiciel que nous livrons, à essayer ici</h2>
+      <p class="lede">Un outil de gestion comme ceux que nous développons pour nos clients. Faites glisser une affaire jusqu'à <strong>Gagné</strong>&nbsp;: la facture se crée, l'écriture comptable suit et le tableau de bord se met à jour.</p>
     </div>
   </div>
-
+  <div class="wrap">
   <div class="app" id="app" aria-label="Démonstration interactive d'un outil de gestion développé par Nexus">
     <div class="app-bar">
       <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -223,43 +244,24 @@ tableau.<span class="f">actualiser</span>(<span class="s">'ventes'</span>);
     </div>
   </div>
   <p class="wrap demo-note">Démonstration avec des données fictives. Les taux de change sont indicatifs.</p>
+  </div>
 </section>
 
-
-<!-- EXPERTISE -->
-<section class="norms" id="expertise">
+<section class="tech sec" id="technologies">
   <div class="wrap">
-    <div class="sec-top" data-reveal>
-      <h2 class="display-2">L'exigence européenne, partout où vous êtes.</h2>
-      <p class="sec-lede">Méthodes, sécurité, protection des données et qualité de service&nbsp;: nos équipes de Varsovie et d'Alger travaillent selon les standards des grands groupes européens, sur les technologies du marché.</p>
+    <div class="sec-head" data-reveal>
+      <h2 class="h2">Technologies et standards</h2>
+      <p class="lede">Nous travaillons sur les outils du marché et selon les standards européens de sécurité et de protection des données.</p>
     </div>
-  </div>
-  <div class="marquee" aria-label="Technologies et standards que nous utilisons">
-    <ul class="mq-row"><li><b>Microsoft 365</b><span>Collaboration</span></li><li><b>Azure</b><span>Cloud</span></li><li><b>AWS</b><span>Cloud</span></li><li><b>Odoo</b><span>ERP</span></li><li><b>Salesforce</b><span>CRM</span></li><li><b>Power BI</b><span>Données</span></li><li><b>SAP Business One</b><span>ERP</span></li></ul><ul class="mq-row" aria-hidden="true"><li><b>Microsoft 365</b><span>Collaboration</span></li><li><b>Azure</b><span>Cloud</span></li><li><b>AWS</b><span>Cloud</span></li><li><b>Odoo</b><span>ERP</span></li><li><b>Salesforce</b><span>CRM</span></li><li><b>Power BI</b><span>Données</span></li><li><b>SAP Business One</b><span>ERP</span></li></ul>
-  </div>
-  <div class="marquee rev" aria-hidden="true">
-    <ul class="mq-row"><li><b>React</b><span>Web</span></li><li><b>Node.js</b><span>Back-end</span></li><li><b>Python</b><span>Données et IA</span></li><li><b>.NET</b><span>Applications métier</span></li><li><b>Kubernetes</b><span>Infrastructure</span></li><li><b>RGPD</b><span>Protection des données</span></li><li><b>ISO 27001</b><span>Sécurité</span></li><li><b>ITIL</b><span>Services informatiques</span></li><li><b>Scrum</b><span>Méthode agile</span></li></ul><ul class="mq-row"><li><b>React</b><span>Web</span></li><li><b>Node.js</b><span>Back-end</span></li><li><b>Python</b><span>Données et IA</span></li><li><b>.NET</b><span>Applications métier</span></li><li><b>Kubernetes</b><span>Infrastructure</span></li><li><b>RGPD</b><span>Protection des données</span></li><li><b>ISO 27001</b><span>Sécurité</span></li><li><b>ITIL</b><span>Services informatiques</span></li><li><b>Scrum</b><span>Méthode agile</span></li></ul>
+    <div class="tech-grid" data-reveal-list><div class="tech-col"><h3>Cloud</h3><ul><li>Microsoft Azure</li><li>Amazon Web Services</li><li>Google Cloud</li><li>OVHcloud</li></ul></div><div class="tech-col"><h3>Applications</h3><ul><li>Microsoft 365</li><li>Dynamics 365</li><li>Odoo</li><li>Salesforce</li></ul></div><div class="tech-col"><h3>Données</h3><ul><li>Power BI</li><li>SQL Server</li><li>PostgreSQL</li><li>Python</li></ul></div><div class="tech-col"><h3>Développement</h3><ul><li>TypeScript et React</li><li>Node.js</li><li>.NET</li><li>Java</li></ul></div><div class="tech-col"><h3>Infrastructure</h3><ul><li>Windows Server</li><li>Linux</li><li>VMware</li><li>Kubernetes</li></ul></div><div class="tech-col"><h3>Méthodes et normes</h3><ul><li>Scrum</li><li>ITIL</li><li>RGPD</li><li>ISO 27001</li></ul></div></div>
   </div>
 </section>
 
-<!-- POURQUOI -->
-<section class="why">
-  <div class="wrap">
-    <h2 class="why-title"><span class="why-o">Pourquoi</span> <span>nexus</span></h2>
-    <div class="why-grid" data-reveal-list>
-      <article class="why-card"><h3>Un seul partenaire</h3><p>Conseil, logiciels, formation, matériel&nbsp;: un interlocuteur unique, une seule responsabilité, aucune zone grise entre prestataires.</p></article>
-      <article class="why-card"><h3>L'exigence européenne</h3><p>Les méthodes, la sécurité et la qualité de service des grands groupes, accessibles aux PME comme aux grands comptes.</p></article>
-      <article class="why-card"><h3>Des résultats mesurés</h3><p>Chaque projet démarre avec des objectifs chiffrés et se termine par un bilan&nbsp;: temps gagné, coûts, adoption par les équipes.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT : configurateur de projet -->
-<section class="contact" id="contact">
+<section class="contact sec sec-stone" id="contact">
   <div class="wrap cfg-grid">
     <div class="cfg-left">
-      <h2 class="display-2">Lancez votre projet en une minute.</h2>
-      <p class="sec-lede">Quatre questions, aucun formulaire interminable. Votre brief se construit en direct, prêt à nous être envoyé.</p>
+      <h2 class="h2">Décrivez votre projet en une minute</h2>
+      <p class="lede">Quatre questions, puis vos coordonnées. Votre brief se construit à mesure que vous répondez.</p>
       <article class="brief" id="brief" aria-live="polite">
         <header><span class="brief-ref" id="briefRef">Brief NX</span><span class="brief-state" id="briefState">En cours</span></header>
         <dl>
@@ -271,9 +273,11 @@ tableau.<span class="f">actualiser</span>(<span class="s">'ventes'</span>);
         </dl>
         <div class="brief-bar"><i id="briefBar"></i></div>
       </article>
-      <p class="cfg-offices">Nexus Europe, Varsovie. Nexus Algérie, Alger. <a href="mailto:contact@abboute.com">contact@abboute.com</a></p>
+      <div class="direct">
+        <p>Vous préférez écrire directement&nbsp;?</p>
+        <button type="button" class="copy-mail" id="copyMail" data-mail="contact@abboute.com">contact@abboute.com <span>Copier</span></button>
+      </div>
     </div>
-
     <form class="cfg" id="cfg" novalidate>
       <div class="cfg-top"><button type="button" class="cfg-back" id="cfgBack" aria-label="Question précédente" disabled><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
         <div class="cfg-prog" aria-hidden="true"><i id="cfgProg"></i></div><span class="cfg-count" id="cfgCount">1 sur 5</span></div>
@@ -319,7 +323,7 @@ tableau.<span class="f">actualiser</span>(<span class="s">'ventes'</span>);
         <dl class="done-sum" id="doneSum"></dl>
         <div class="done-actions">
           <a class="btn btn-primary" id="cfgSend" href="#">Envoyer le brief</a>
-          <button type="button" class="btn btn-ghost" id="cfgCopy">Copier le brief</button>
+          <button type="button" class="btn btn-secondary" id="cfgCopy">Copier le brief</button>
         </div>
         <button type="button" class="cfg-restart" id="cfgEdit">Modifier mes réponses</button>
       </div>
@@ -330,15 +334,18 @@ tableau.<span class="f">actualiser</span>(<span class="s">'ventes'</span>);
 
 </main>
 
+<a href="#contact" class="mob-cta btn btn-primary" id="mobCta">Décrire mon projet <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5"/></svg></a>
+
 <footer class="footer">
-  <div class="foot-giant" aria-hidden="true"><div class="fg-track"><span>nexus</span><span>nexus</span><span>nexus</span><span>nexus</span><span>nexus</span><span>nexus</span></div></div>
   <div class="wrap foot-cols">
-    <div class="foot-brand"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">nexus</span></div>
-    <nav class="foot-col" aria-label="Pied de page"><a href="#metiers">Métiers</a><a href="#methode">Méthode</a><a href="#demo">Réalisation</a><a href="#expertise">Expertise</a></nav>
-    <div class="foot-col"><span class="fh">Bureaux</span><span>Nexus Europe, Varsovie</span><span>Nexus Algérie, Alger</span></div>
-    <div class="foot-col"><span class="fh">Contact</span><a href="mailto:contact@abboute.com">contact@abboute.com</a></div>
+    <div class="foot-brand"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">nexus</span>
+      <p>Conseil, ingénierie logicielle, formation, infogérance et équipement.</p></div>
+    <nav class="foot-col" aria-label="Pied de page"><span class="fh">Le groupe</span><a href="#services">Services</a><a href="#engagement">Engagement</a><a href="#methode">Méthode</a><a href="#technologies">Technologies</a></nav>
+    <div class="foot-col"><span class="fh">Centres de services</span><span>Nexus Europe, Varsovie</span><span>Nexus Algérie, Alger</span></div>
+    <div class="foot-col"><span class="fh">Contact</span><a href="mailto:contact@abboute.com">contact@abboute.com</a><a href="#contact">Décrire mon projet</a></div>
   </div>
-  <div class="wrap foot-base"><span>© 2026 Nexus</span><span>Conseil, logiciels, formation, externalisation, matériel</span></div>
+  <div class="foot-giant" aria-hidden="true">nexus</div>
+  <div class="wrap foot-base"><span>© 2026 Nexus</span><span>Varsovie, Alger</span></div>
 </footer>
 
 </body>

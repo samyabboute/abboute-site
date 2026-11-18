@@ -3,20 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 — nexus</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<title>Page introuvable, Nexus</title>
+<link rel="stylesheet" href="/assets/css/site.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#07090f;color:#f2f4f9;font-family:'Inter',sans-serif;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center;padding:24px}
-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(5rem,18vw,12rem);line-height:1;letter-spacing:-.03em;background:linear-gradient(180deg,#fff,#4f7cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-p{color:#8a92a6;font-size:1.1rem}
-a{margin-top:12px;display:inline-block;font-family:'Syne',sans-serif;font-weight:700;color:#07090f;background:#4f7cff;padding:14px 30px;border-radius:40px;text-decoration:none;transition:.3s}
-a:hover{background:#6b90ff;transform:translateY(-2px)}
+body{background:var(--ink);color:#fff;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:0 var(--gut)}
+.nf{max-width:1400px;width:100%;margin:0 auto}
+.nf .brand{margin-bottom:56px}
+.nf h1{font-weight:600;font-size:clamp(2.4rem,5vw,4.6rem);letter-spacing:-.045em;line-height:1.02;max-width:16ch}
+.nf p{color:#a7adbb;margin:20px 0 34px;max-width:44ch}
 </style>
 </head>
 <body>
-<h1>404</h1>
-<p>Cette page n'existe pas ou a été déplacée.</p>
-<a href="/">Retour à l'accueil</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="mark" viewBox="0 0 48 48"><path d="M14 34V14l20 20V14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="14" r="4.5" fill="#1f3bff"/></symbol></svg>
+<main class="nf">
+  <a href="/" class="brand" aria-label="Nexus, accueil"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">nexus</span></a>
+  <h1>Cette page n'existe pas, ou plus.</h1>
+  <p>Le lien est peut-être ancien. Tout le reste se trouve sur la page d'accueil.</p>
+  <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+</main>
 </body>
 </html>
