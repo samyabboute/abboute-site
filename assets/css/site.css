@@ -1,4 +1,4 @@
-/* Nexus : feuille de styles du site */
+/* ABBOUTE Technologies : feuille de styles du site */
 @font-face{font-family:'Geist';font-style:normal;font-display:swap;font-weight:100 900;src:url(../fonts/geist-latin-ext-wght-normal.woff2) format('woff2-variations');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Geist';font-style:normal;font-display:swap;font-weight:100 900;src:url(../fonts/geist-latin-wght-normal.woff2) format('woff2-variations');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 
@@ -365,7 +365,7 @@ img,svg{display:block}
 .manifesto{background:var(--blue);color:#fff;padding:clamp(120px,15vw,230px) 0}
 .mf-text .w{color:rgba(255,255,255,.32)}
 
-/* Une journée avec Nexus */
+/* Une journée */
 .day{position:relative;height:520vh}
 .day-pin{position:sticky;top:0;height:100svh;overflow:hidden;background:rgb(14,22,48);color:#fff;display:flex;align-items:center}
 .day-inner{width:100%;display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:auto 1fr auto;column-gap:clamp(30px,5vw,90px);row-gap:28px;height:100%;padding-top:110px;padding-bottom:56px}
@@ -459,7 +459,7 @@ html[lang=ar] .hl{padding-bottom:.12em}
 [dir=rtl] .g-tabs button{text-align:right}
 [dir=rtl] .nav-links a.active::after{left:0;right:0}
 
-/* ===== Aujourd'hui / Avec Nexus ===== */
+/* ===== Aujourd'hui / Avec ABBOUTE ===== */
 .ba{background:var(--paper)}
 .ba-switch{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-top:26px;padding:4px;border-radius:12px;background:var(--stone);box-shadow:inset 0 0 0 1px var(--line)}
 .ba-switch button{position:relative;z-index:1;height:44px;padding:0 22px;border:0;background:none;font-weight:600;font-size:15px;cursor:pointer;color:var(--text-2);transition:color .35s}
@@ -665,3 +665,13 @@ html,body{overflow-x:clip}
 .ba.is-after .ba-card:nth-child(4) .ba-inner{transition-delay:.18s}.ba.is-after .ba-card:nth-child(5) .ba-inner{transition-delay:.24s}.ba.is-after .ba-card:nth-child(6) .ba-inner{transition-delay:.3s}
 .ba-card{perspective:1400px}
 .cfg-count{direction:ltr;unicode-bidi:isolate}
+
+/* Marque ABBOUTE Technologies */
+.brand{gap:11px}
+.brand-mark{width:30px;height:30px}
+.brand-word{display:inline-flex;align-items:baseline;gap:7px;font-weight:700;font-size:19px;letter-spacing:.07em!important;line-height:1}
+.brand-word small{font-size:12.5px;font-weight:500;letter-spacing:.01em!important;opacity:.62}
+.foot-giant{font-size:clamp(4.6rem,17vw,17.5rem);letter-spacing:-.055em;font-weight:700}
+.foot-brand .brand-word{font-size:21px}
+@media(max-width:560px){.nav .brand-word small{display:none}}
+.brand-word{direction:ltr;unicode-bidi:isolate}

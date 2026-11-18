@@ -1,4 +1,4 @@
-/* Nexus : comportements du site */
+/* ABBOUTE Technologies : comportements du site */
 (function(){
 'use strict';
 var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -121,7 +121,7 @@ document.querySelectorAll('.svc-head').forEach(function(btn){
   });
 });
 
-/* Aujourd'hui / Avec Nexus : bascule, puis passe seul à « Avec Nexus » à la première lecture */
+/* Aujourd'hui / Avec ABBOUTE : bascule, puis passe seul à « Avec ABBOUTE » à la première lecture */
 var ba = document.getElementById('avant-apres');
 if(ba){
   var baBtns = ba.querySelectorAll('[data-ba]'), touched = false;

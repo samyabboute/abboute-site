@@ -1,4 +1,4 @@
-/* Nexus : configurateur de projet. Quatre questions, un brief prêt à envoyer. Bilingue. */
+/* ABBOUTE Technologies : configurateur de projet. Quatre questions, un brief prêt à envoyer. Bilingue. */
 (function(){
 'use strict';
 var form = document.getElementById('cfg');
@@ -14,7 +14,7 @@ var info = { name: '', email: '', phone: '', company: '' };
 var cur = 0, busy = false, inView = false, ready = false;
 
 var d = new Date();
-var ref = 'NX-' + String(d.getDate()).padStart(2,'0') + String(d.getMonth()+1).padStart(2,'0') + '-' + Math.floor(1000 + Math.random()*9000);
+var ref = 'AT-' + String(d.getDate()).padStart(2,'0') + String(d.getMonth()+1).padStart(2,'0') + '-' + Math.floor(1000 + Math.random()*9000);
 document.getElementById('briefRef').textContent = 'Brief ' + ref;
 
 /* Réponses lues depuis les libellés : elles suivent la langue affichée */
