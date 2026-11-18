@@ -175,29 +175,4 @@ document.querySelectorAll('.why-card').forEach(function(c){
   });
 });
 
-/* Contact : prépare un e-mail réel (site statique, sans serveur) */
-var form = document.getElementById('contactForm');
-if(form){
-  var status = document.getElementById('formStatus');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var bad = [];
-    ['cf-name','cf-mail','cf-msg'].forEach(function(id){
-      var el = document.getElementById(id), f = el.closest('.field');
-      var ok = el.value.trim() !== '' && (el.type !== 'email' || /\S+@\S+\.\S+/.test(el.value));
-      f.classList.toggle('err', !ok); if(!ok) bad.push(el);
-    });
-    if(bad.length){
-      status.className = 'form-status bad';
-      status.textContent = 'Complétez le nom, une adresse e-mail valide et la description du projet.';
-      bad[0].focus(); return;
-    }
-    var d = new FormData(form);
-    var subject = 'Projet ' + d.get('need') + ' — ' + (d.get('company') || d.get('name'));
-    var bodyTxt = 'Nom : ' + d.get('name') + '\nE-mail : ' + d.get('email') + '\nEntreprise : ' + (d.get('company')||'-') + '\nBesoin : ' + d.get('need') + '\n\n' + d.get('message');
-    location.href = 'mailto:contact@abboute.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyTxt);
-    status.className = 'form-status';
-    status.textContent = 'Votre messagerie s’ouvre avec la demande préremplie. Il ne reste qu’à l’envoyer.';
-  });
-}
 })();

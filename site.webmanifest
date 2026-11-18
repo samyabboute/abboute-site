@@ -1,11 +1,11 @@
 {
-  "name": "ABBOUTE Global Trading",
-  "short_name": "ABBOUTE",
+  "name": "Nexus, groupe informatique",
+  "short_name": "Nexus",
   "description": "Algerian terroir products delivered across the European Union.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#060d20",
-  "theme_color": "#060d20",
+  "background_color": "#05070d",
+  "theme_color": "#05070d",
   "icons": [
     { "src": "/assets/icons/favicon-48.png", "sizes": "48x48", "type": "image/png" },
     { "src": "/assets/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }

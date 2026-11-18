@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ABBOUTE, éditeur et intégrateur de logiciels pour entreprises</title>
-<meta name="description" content="ABBOUTE est une entreprise technologique installée à Varsovie et à Alger. Nous concevons, développons et maintenons les logiciels des entreprises : CRM, comptabilité, gestion de projet et outils sur mesure.">
-<meta name="theme-color" content="#060d20">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23060d20'/%3E%3Cpath d='M35 15A14 14 0 1 0 37.5 27' fill='none' stroke='%23fff' stroke-width='4.2' stroke-linecap='round'/%3E%3Cpath d='M10 31C19 25 28 18 40 12' fill='none' stroke='%237d9bff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Nexus, groupe informatique : conseil, logiciels, formation, externalisation et matériel</title>
+<meta name="description" content="Nexus est un groupe informatique européen installé à Varsovie et à Alger. Conseil, conception de logiciels, formation, externalisation et matériel : un seul partenaire pour moderniser et digitaliser votre entreprise.">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%2305070d'/%3E%3Cpath d='M14 34V14l20 20V14' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='14' r='4' fill='%2322d3ee'/%3E%3Ccircle cx='34' cy='34' r='4' fill='%236c63ff'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="preload" href="assets/js/land.bin" as="fetch" type="application/octet-stream" crossorigin>
@@ -16,39 +16,40 @@
 <script defer src="assets/js/globe.js"></script>
 <script defer src="assets/js/main.js"></script>
 <script defer src="assets/js/suite.js"></script>
+<script defer src="assets/js/brief.js"></script>
 
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="mark" viewBox="0 0 48 48">
-    <path class="mk-ring" d="M35 15A14 14 0 1 0 37.5 27" fill="none" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/>
-    <path class="mk-swoosh" d="M10 31C19 25 28 18 40 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14 34V14l20 20V14" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="14" cy="14" r="4" fill="#22d3ee"/><circle cx="34" cy="34" r="4" fill="#6c63ff"/>
   </symbol>
 </svg>
 
 <!-- Chargement -->
 <div class="loader" id="loader" aria-hidden="true">
   <svg class="loader-mark" viewBox="0 0 48 48">
-    <path class="lm-ring" d="M35 15A14 14 0 1 0 37.5 27"/>
-    <path class="lm-swoosh" d="M10 31C19 25 28 18 40 12"/>
+    <path class="lm-ring" d="M14 34V14l20 20V14"/>
+    <circle class="lm-n1" cx="14" cy="14" r="4"/><circle class="lm-n2" cx="34" cy="34" r="4"/>
   </svg>
-  <div class="loader-word">ABBOUTE</div>
+  <div class="loader-word">nexus</div>
 </div>
 
 <a class="skip" href="#contenu">Aller au contenu</a>
 
 <header class="nav" id="nav">
-  <a href="#top" class="brand" aria-label="ABBOUTE, accueil">
+  <a href="#top" class="brand" aria-label="Nexus, accueil">
     <svg class="brand-mark"><use href="#mark"/></svg>
-    <span class="brand-word">ABBOUTE</span>
+    <span class="brand-word">nexus</span>
   </a>
   <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-    <a href="#solutions">Expertises</a>
-    <a href="#demo">Exemple</a>
+    <a href="#metiers">Métiers</a>
     <a href="#methode">Méthode</a>
-    <a href="#normes">Normes</a>
-    <a href="#contact" class="nav-cta">Parler de votre projet</a>
+    <a href="#demo">Réalisation</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#contact" class="nav-cta">Lancer votre projet</a>
   </nav>
   <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
 </header>
@@ -57,18 +58,18 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <canvas class="globe" id="globe" aria-label="Globe interactif reliant Alger, Paris, Berlin et Varsovie. Faites-le tourner en le faisant glisser." role="img"></canvas>
+  <canvas class="globe" id="globe" aria-label="Globe interactif reliant les bureaux Nexus d'Alger et de Varsovie à Paris et Berlin. Faites-le tourner en le faisant glisser." role="img"></canvas>
   <div class="globe-labels" id="globeLabels" aria-hidden="true"></div>
   <div class="hero-inner">
     <h1 class="hero-title">
-      <span class="hl"><span>Nous concevons</span></span>
-      <span class="hl"><span>les logiciels qui font</span></span>
-      <span class="hl"><span>tourner les entreprises.</span></span>
+      <span class="hl"><span>Nous modernisons</span></span>
+      <span class="hl"><span>les entreprises</span></span>
+      <span class="hl"><span>par la technologie.</span></span>
     </h1>
-    <p class="hero-lede">Entreprise technologique entre l'Europe et l'Afrique du Nord. Nous concevons, développons et maintenons vos CRM, outils comptables et logiciels métiers.</p>
+    <p class="hero-lede">Nexus est un groupe informatique européen. Conseil, logiciels, formation, externalisation et matériel&nbsp;: un seul partenaire pour digitaliser votre entreprise, de la stratégie à la mise en service.</p>
     <div class="hero-actions">
-      <a href="#solutions" class="btn btn-primary">Découvrir nos expertises</a>
-      <a href="#contact" class="btn btn-ghost">Parler de votre projet</a>
+      <a href="#contact" class="btn btn-primary">Lancer votre projet</a>
+      <a href="#metiers" class="btn btn-ghost">Nos métiers</a>
     </div>
   </div>
 </section>
@@ -76,87 +77,121 @@
 <!-- MANIFESTE -->
 <section class="manifesto" aria-label="Notre approche">
   <div class="wrap">
-    <p class="mf-text" id="manifesto">Nous ne vendons pas un logiciel de plus. Nous construisons le vôtre, avec vos équipes, livré toutes les deux semaines, conforme aux règles de chaque pays où vous travaillez. Et il vous appartient.</p>
+    <p class="mf-text" id="manifesto">Moderniser une entreprise ne se résume pas à acheter un logiciel. Nous conseillons, construisons, formons et équipons vos équipes, jusqu'à ce que le changement se voie dans leur travail de chaque jour.</p>
   </div>
 </section>
 
-<!-- SOLUTIONS -->
-<section class="solutions" id="solutions">
+<!-- METIERS -->
+<section class="solutions" id="metiers">
   <div class="wrap">
     <div class="sec-top" data-reveal>
-      <h2 class="display-2">Nos expertises</h2>
-      <p class="sec-lede">Quatre domaines que nous maîtrisons, connectés entre eux et à vos outils existants. Survolez-les pour voir à quoi ils ressemblent.</p>
+      <h2 class="display-2">Cinq métiers, un seul groupe.</h2>
+      <p class="sec-lede">Tout ce qu'il faut pour moderniser une entreprise, réuni chez un même partenaire. Survolez un métier pour voir ce que nous livrons.</p>
     </div>
     <ul class="sol-list" data-reveal-list>
-      <li class="sol" data-pv="crm">
-        <h3>CRM</h3>
-        <p>Suivez chaque prospect du premier contact à la signature&nbsp;: pipeline, relances automatiques, prévisions de chiffre d'affaires.</p>
-        <span class="sol-tags">Pipeline, relances, prévisions</span>
-      </li>
-      <li class="sol" data-pv="inv">
-        <h3>Comptabilité et facturation</h3>
-        <p>Factures conformes aux règles de chaque pays, écritures passées automatiquement, rapprochement bancaire, clôtures plus rapides.</p>
-        <span class="sol-tags">Factures, écritures, trésorerie</span>
-      </li>
-      <li class="sol" data-pv="plan">
-        <h3>Gestion de projet</h3>
-        <p>Planifiez en sprints, suivez le temps passé et la rentabilité réelle de chaque projet, client par client.</p>
-        <span class="sol-tags">Sprints, temps, rentabilité</span>
+      <li class="sol" data-pv="conseil">
+        <h3>Conseil et transformation digitale</h3>
+        <p>Diagnostic de maturité, feuille de route, choix des outils. Nous vous disons quoi moderniser en premier, et pourquoi.</p>
+        <span class="sol-tags">Audit, feuille de route, choix des outils</span>
       </li>
       <li class="sol" data-pv="code">
-        <h3>Logiciel sur mesure</h3>
-        <p>Quand aucun outil du marché ne colle à votre métier, nous construisons le vôtre, avec vous, et vous en restez propriétaire.</p>
-        <span class="sol-tags">Web, mobile, intégrations</span>
+        <h3>Conception de logiciels</h3>
+        <p>CRM, ERP, applications web et mobiles, intégrations. Nous concevons et développons les outils qui manquent à votre métier.</p>
+        <span class="sol-tags">Web, mobile, CRM, ERP</span>
+      </li>
+      <li class="sol" data-pv="formation">
+        <h3>Formation</h3>
+        <p>Vos équipes adoptent vraiment les nouveaux outils&nbsp;: formations sur site ou à distance, parcours par métier, supports remis.</p>
+        <span class="sol-tags">Sur site, à distance, par métier</span>
+      </li>
+      <li class="sol" data-pv="outsourcing">
+        <h3>Externalisation</h3>
+        <p>Équipes de développement dédiées, infogérance, support utilisateurs. Vous gagnez en capacité sans recruter.</p>
+        <span class="sol-tags">Équipes dédiées, infogérance, support</span>
+      </li>
+      <li class="sol" data-pv="materiel">
+        <h3>Matériel et infrastructure</h3>
+        <p>Postes de travail, réseaux, serveurs et cloud. Nous fournissons, installons et maintenons votre parc informatique.</p>
+        <span class="sol-tags">Postes, réseaux, serveurs, cloud</span>
       </li>
     </ul>
   </div>
   <div class="pv" id="pv" aria-hidden="true">
-    <div class="pv-panel" data-k="crm">
-      <div class="pv-head"><b>Pipeline</b><span>Novembre</span></div>
-      <div class="pv-kb">
-        <div><i>Prospect</i><em></em><em class="s"></em><em></em></div>
-        <div><i>Proposition</i><em class="s"></em><em></em></div>
-        <div><i>Gagné</i><em class="w"></em></div>
+    <div class="pv-panel" data-k="conseil">
+      <div class="pv-head"><b>Diagnostic de maturité</b><span>Exemple</span></div>
+      <div class="pv-bars">
+        <div><span>Processus</span><i style="--v:.72"></i><b>72</b></div>
+        <div><span>Outils</span><i style="--v:.41"></i><b>41</b></div>
+        <div><span>Données</span><i style="--v:.55"></i><b>55</b></div>
+        <div><span>Équipes</span><i style="--v:.83"></i><b>83</b></div>
       </div>
-      <em class="pv-fly"></em>
-    </div>
-    <div class="pv-panel" data-k="inv">
-      <div class="pv-head"><b>Facture FA-2026-046</b><span class="ok">Conforme KSeF</span></div>
-      <ul class="pv-lines"><li><span>Licence et intégration</span><b>12 400,00</b></li><li><span>Formation des équipes</span><b>1 800,00</b></li><li><span>TVA 23 %</span><b>3 266,00</b></li></ul>
-      <div class="pv-total"><span>Total TTC</span><b>17 466,00 PLN</b></div>
-    </div>
-    <div class="pv-panel" data-k="plan">
-      <div class="pv-head"><b>Projet Atlas</b><span>Sprint 3 sur 6</span></div>
-      <div class="pv-gantt">
-        <div><span>Cadrage</span><i style="--a:0;--b:18%"></i></div>
-        <div><span>Maquettes</span><i style="--a:12%;--b:26%"></i></div>
-        <div><span>Sprint 1</span><i style="--a:30%;--b:18%"></i></div>
-        <div><span>Sprint 2</span><i style="--a:46%;--b:18%"></i></div>
-        <div><span>Sprint 3</span><i class="now" style="--a:62%;--b:18%"></i></div>
-        <b class="pv-today"></b>
-      </div>
+      <div class="pv-total"><span>Priorité n°1</span><b>Unifier les outils</b></div>
     </div>
     <div class="pv-panel" data-k="code">
-      <div class="pv-head"><b>facturation.ts</b><span>main</span></div>
-      <pre class="pv-code"><span class="k">const</span> facture = <span class="k">await</span> creerFacture(affaire);
-<span class="k">await</span> ksef.<span class="f">envoyer</span>(facture);
-compta.<span class="f">passerEcriture</span>(facture, <span class="s">'706'</span>);
+      <div class="pv-head"><b>synchronisation.ts</b><span>main</span></div>
+      <pre class="pv-code"><span class="k">const</span> clients = <span class="k">await</span> crm.<span class="f">lister</span>();
+<span class="k">await</span> erp.<span class="f">synchroniser</span>(clients);
+tableau.<span class="f">actualiser</span>(<span class="s">'ventes'</span>);
 <span class="c">// livré au sprint 4, testé</span><span class="caret"></span></pre>
     </div>
+    <div class="pv-panel" data-k="formation">
+      <div class="pv-head"><b>Parcours Microsoft 365</b><span>Exemple</span></div>
+      <div class="pv-bars">
+        <div><span>Teams</span><i style="--v:1"></i><b>100 %</b></div>
+        <div><span>SharePoint</span><i style="--v:.75"></i><b>75 %</b></div>
+        <div><span>Power BI</span><i class="live" style="--v:.4"></i><b>40 %</b></div>
+      </div>
+      <div class="pv-total"><span>Équipe ventes</span><b>18 personnes</b></div>
+    </div>
+    <div class="pv-panel" data-k="outsourcing">
+      <div class="pv-head"><b>Support utilisateurs</b><span>Exemple</span></div>
+      <ul class="pv-lines pv-tickets">
+        <li><span><i class="dot ok"></i>Accès VPN, Lyon</span><b>Résolu</b></li>
+        <li><span><i class="dot ok"></i>Nouveau poste, Varsovie</span><b>Résolu</b></li>
+        <li class="new"><span><i class="dot run"></i>Imprimante, Alger</span><b>En cours</b></li>
+      </ul>
+      <div class="pv-total"><span>Prise en charge</span><b>en 12 min</b></div>
+    </div>
+    <div class="pv-panel" data-k="materiel">
+      <div class="pv-head"><b>Parc informatique</b><span>Exemple</span></div>
+      <ul class="pv-lines">
+        <li><span><i class="dot ok"></i>Postes de travail</span><b>48 à jour</b></li>
+        <li><span><i class="dot ok"></i>Serveurs et cloud</span><b>6 surveillés</b></li>
+        <li><span><i class="dot run"></i>Réseau et Wi-Fi</span><b>3 sites</b></li>
+      </ul>
+      <div class="pv-total"><span>Sauvegarde</span><b>cette nuit, 02 h 00</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODE -->
+<section class="method" id="methode">
+  <div class="wrap">
+    <div class="sec-top" data-reveal>
+      <h2 class="display-2">La rigueur d'un cabinet de conseil, l'exécution d'un intégrateur.</h2>
+      <p class="sec-lede">Cinq étapes, des résultats visibles à chacune. Vous savez toujours où en est le projet et ce qu'il a coûté.</p>
+    </div>
+    <ol class="steps" id="steps" data-reveal-list>
+      <li class="step"><span class="step-n">1</span><h3>Diagnostic</h3><p>Nous observons vos processus, vos outils et vos équipes pour mesurer où vous en êtes.</p></li>
+      <li class="step"><span class="step-n">2</span><h3>Feuille de route</h3><p>Les chantiers classés par impact et par coût, avec un budget et un calendrier clairs.</p></li>
+      <li class="step"><span class="step-n">3</span><h3>Mise en œuvre</h3><p>Logiciels, matériel, intégrations&nbsp;: livrés par étapes et testés avec vous.</p></li>
+      <li class="step"><span class="step-n">4</span><h3>Formation</h3><p>Chaque équipe est formée à ses nouveaux outils, supports à l'appui.</p></li>
+      <li class="step"><span class="step-n">5</span><h3>Accompagnement</h3><p>Support, maintenance et améliorations continues, avec des engagements écrits.</p></li>
+    </ol>
   </div>
 </section>
 
 <!-- DEMO -->
 <section class="demo" id="demo">
   <div class="wrap demo-head" data-reveal>
-    <h2 class="display-2">Un exemple de ce que nous livrons.</h2>
+    <h2 class="display-2">Un logiciel que nous livrons, à essayer ici.</h2>
     <div class="demo-intro">
-      <p>Voici un outil de gestion du type de ceux que nous développons pour nos clients. Faites glisser une affaire jusqu'à <strong>Gagné</strong>&nbsp;: la facture se crée, l'écriture comptable suit et le tableau de bord se met à jour. Changez de pays&nbsp;: TVA, devise et format de facture s'adaptent.</p>
+      <p>Un outil de gestion comme ceux que nous développons pour nos clients. Faites glisser une affaire jusqu'à <strong>Gagné</strong>&nbsp;: la facture se crée, l'écriture comptable suit et le tableau de bord se met à jour.</p>
       <p class="kbd-hint">Astuce&nbsp;: <kbd>Ctrl</kbd> + <kbd>K</kbd> ouvre la recherche.</p>
     </div>
   </div>
 
-  <div class="app" id="app" aria-label="Démonstration interactive d'un outil de gestion développé par ABBOUTE">
+  <div class="app" id="app" aria-label="Démonstration interactive d'un outil de gestion développé par Nexus">
     <div class="app-bar">
       <div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="app-title">Outil de gestion <span>projet type</span></div>
@@ -191,76 +226,104 @@ compta.<span class="f">passerEcriture</span>(facture, <span class="s">'706'</spa
 </section>
 
 
-<!-- METHODE -->
-<section class="method" id="methode">
+<!-- EXPERTISE -->
+<section class="norms" id="expertise">
   <div class="wrap">
     <div class="sec-top" data-reveal>
-      <h2 class="display-2">Une méthode agile, en cinq étapes</h2>
-      <p class="sec-lede">Vous voyez le logiciel avancer toutes les deux semaines. Pas d'effet tunnel, pas de surprise à la livraison.</p>
+      <h2 class="display-2">L'exigence européenne, partout où vous êtes.</h2>
+      <p class="sec-lede">Méthodes, sécurité, protection des données et qualité de service&nbsp;: nos équipes de Varsovie et d'Alger travaillent selon les standards des grands groupes européens, sur les technologies du marché.</p>
     </div>
-    <ol class="steps" id="steps" data-reveal-list>
-      <li class="step"><span class="step-n">1</span><h3>Cadrage</h3><p>Deux à trois ateliers pour comprendre vos processus et fixer le périmètre et le budget.</p></li>
-      <li class="step"><span class="step-n">2</span><h3>Conception</h3><p>Des maquettes cliquables validées avec vos équipes avant la première ligne de code.</p></li>
-      <li class="step"><span class="step-n">3</span><h3>Sprints</h3><p>Une nouvelle version toutes les deux semaines. Vous testez, nous ajustons.</p></li>
-      <li class="step"><span class="step-n">4</span><h3>Mise en service</h3><p>Reprise de vos données, formation des utilisateurs, bascule accompagnée.</p></li>
-      <li class="step"><span class="step-n">5</span><h3>Suivi</h3><p>Maintenance, évolutions et support, avec des délais d'intervention écrits.</p></li>
-    </ol>
   </div>
-</section>
-
-<!-- NORMES -->
-<section class="norms" id="normes">
-  <div class="wrap">
-    <div class="sec-top" data-reveal>
-      <h2 class="display-2">Aux normes de chaque pays, dès le départ.</h2>
-      <p class="sec-lede">Nos logiciels intègrent les règles des pays où travaillent nos clients, au lieu de les ajouter après coup.</p>
-    </div>
-    <div class="marquee" aria-label="Normes et formats pris en charge">
-      <ul class="mq-row"><li><b>RGPD</b><span>Protection des données</span></li><li><b>Hébergement UE</b><span>Données en Europe</span></li><li><b>ISO 27001</b><span>Bonnes pratiques sécurité</span></li><li><b>OWASP</b><span>Sécurité applicative</span></li><li><b>WCAG 2.2 AA</b><span>Accessibilité</span></li><li><b>IFRS</b><span>Normes comptables</span></li><li><b>PCG</b><span>France</span></li><li><b>HGB</b><span>Allemagne</span></li><li><b>SCF</b><span>Algérie</span></li></ul><ul class="mq-row" aria-hidden="true"><li><b>RGPD</b><span>Protection des données</span></li><li><b>Hébergement UE</b><span>Données en Europe</span></li><li><b>ISO 27001</b><span>Bonnes pratiques sécurité</span></li><li><b>OWASP</b><span>Sécurité applicative</span></li><li><b>WCAG 2.2 AA</b><span>Accessibilité</span></li><li><b>IFRS</b><span>Normes comptables</span></li><li><b>PCG</b><span>France</span></li><li><b>HGB</b><span>Allemagne</span></li><li><b>SCF</b><span>Algérie</span></li></ul>
-    </div>
-    <div class="marquee rev" aria-hidden="true">
-      <ul class="mq-row"><li><b>KSeF</b><span>Facture électronique, Pologne</span></li><li><b>Factur-X</b><span>Facture électronique, France</span></li><li><b>XRechnung</b><span>Facture électronique, Allemagne</span></li><li><b>Peppol</b><span>Réseau européen</span></li><li><b>FR EN PL AR</b><span>Quatre langues</span></li><li><b>Arabe</b><span>Écriture de droite à gauche</span></li><li><b>Multi-devises</b><span>Taux mis à jour chaque jour</span></li><li><b>API REST</b><span>Connexion à vos outils</span></li></ul><ul class="mq-row"><li><b>KSeF</b><span>Facture électronique, Pologne</span></li><li><b>Factur-X</b><span>Facture électronique, France</span></li><li><b>XRechnung</b><span>Facture électronique, Allemagne</span></li><li><b>Peppol</b><span>Réseau européen</span></li><li><b>FR EN PL AR</b><span>Quatre langues</span></li><li><b>Arabe</b><span>Écriture de droite à gauche</span></li><li><b>Multi-devises</b><span>Taux mis à jour chaque jour</span></li><li><b>API REST</b><span>Connexion à vos outils</span></li></ul>
-    </div>
+  <div class="marquee" aria-label="Technologies et standards que nous utilisons">
+    <ul class="mq-row"><li><b>Microsoft 365</b><span>Collaboration</span></li><li><b>Azure</b><span>Cloud</span></li><li><b>AWS</b><span>Cloud</span></li><li><b>Odoo</b><span>ERP</span></li><li><b>Salesforce</b><span>CRM</span></li><li><b>Power BI</b><span>Données</span></li><li><b>SAP Business One</b><span>ERP</span></li></ul><ul class="mq-row" aria-hidden="true"><li><b>Microsoft 365</b><span>Collaboration</span></li><li><b>Azure</b><span>Cloud</span></li><li><b>AWS</b><span>Cloud</span></li><li><b>Odoo</b><span>ERP</span></li><li><b>Salesforce</b><span>CRM</span></li><li><b>Power BI</b><span>Données</span></li><li><b>SAP Business One</b><span>ERP</span></li></ul>
+  </div>
+  <div class="marquee rev" aria-hidden="true">
+    <ul class="mq-row"><li><b>React</b><span>Web</span></li><li><b>Node.js</b><span>Back-end</span></li><li><b>Python</b><span>Données et IA</span></li><li><b>.NET</b><span>Applications métier</span></li><li><b>Kubernetes</b><span>Infrastructure</span></li><li><b>RGPD</b><span>Protection des données</span></li><li><b>ISO 27001</b><span>Sécurité</span></li><li><b>ITIL</b><span>Services informatiques</span></li><li><b>Scrum</b><span>Méthode agile</span></li></ul><ul class="mq-row"><li><b>React</b><span>Web</span></li><li><b>Node.js</b><span>Back-end</span></li><li><b>Python</b><span>Données et IA</span></li><li><b>.NET</b><span>Applications métier</span></li><li><b>Kubernetes</b><span>Infrastructure</span></li><li><b>RGPD</b><span>Protection des données</span></li><li><b>ISO 27001</b><span>Sécurité</span></li><li><b>ITIL</b><span>Services informatiques</span></li><li><b>Scrum</b><span>Méthode agile</span></li></ul>
   </div>
 </section>
 
 <!-- POURQUOI -->
 <section class="why">
   <div class="wrap">
-    <h2 class="why-title"><span class="why-o">Pourquoi</span> <span>ABBOUTE</span></h2>
+    <h2 class="why-title"><span class="why-o">Pourquoi</span> <span>nexus</span></h2>
     <div class="why-grid" data-reveal-list>
-      <article class="why-card"><h3>Un seul interlocuteur</h3><p>La même équipe conçoit, développe et maintient votre logiciel. Personne ne découvre votre dossier en cours de route.</p></article>
-      <article class="why-card"><h3>Des progrès visibles</h3><p>Toutes les deux semaines, une version à tester. Vous savez toujours où en est le projet et ce qu'il a coûté.</p></article>
-      <article class="why-card"><h3>Votre code vous appartient</h3><p>Code source, documentation et données vous sont remis. Vous restez libre de changer de prestataire.</p></article>
+      <article class="why-card"><h3>Un seul partenaire</h3><p>Conseil, logiciels, formation, matériel&nbsp;: un interlocuteur unique, une seule responsabilité, aucune zone grise entre prestataires.</p></article>
+      <article class="why-card"><h3>L'exigence européenne</h3><p>Les méthodes, la sécurité et la qualité de service des grands groupes, accessibles aux PME comme aux grands comptes.</p></article>
+      <article class="why-card"><h3>Des résultats mesurés</h3><p>Chaque projet démarre avec des objectifs chiffrés et se termine par un bilan&nbsp;: temps gagné, coûts, adoption par les équipes.</p></article>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT : configurateur de projet -->
 <section class="contact" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-left">
-      <h2 class="display-2">Parlons de votre projet.</h2>
-      <p class="sec-lede">Décrivez votre besoin en quelques lignes. Nous revenons vers vous avec une première estimation.</p>
-      <dl class="offices">
-        <div><dt>Varsovie</dt><dd>ABBOUTE Europe<br>Pologne</dd></div>
-        <div><dt>Alger</dt><dd>ABBOUTE El Djazaïr<br>Algérie</dd></div>
-        <div><dt>Écrire</dt><dd><a href="mailto:contact@abboute.com">contact@abboute.com</a></dd></div>
-      </dl>
+  <div class="wrap cfg-grid">
+    <div class="cfg-left">
+      <h2 class="display-2">Lancez votre projet en une minute.</h2>
+      <p class="sec-lede">Quatre questions, aucun formulaire interminable. Votre brief se construit en direct, prêt à nous être envoyé.</p>
+      <article class="brief" id="brief" aria-live="polite">
+        <header><span class="brief-ref" id="briefRef">Brief NX</span><span class="brief-state" id="briefState">En cours</span></header>
+        <dl>
+          <div data-b="need"><dt>Besoin</dt><dd>À préciser</dd></div>
+          <div data-b="stage"><dt>Situation</dt><dd>À préciser</dd></div>
+          <div data-b="size"><dt>Entreprise</dt><dd>À préciser</dd></div>
+          <div data-b="when"><dt>Démarrage</dt><dd>À préciser</dd></div>
+          <div data-b="who"><dt>Contact</dt><dd>À préciser</dd></div>
+        </dl>
+        <div class="brief-bar"><i id="briefBar"></i></div>
+      </article>
+      <p class="cfg-offices">Nexus Europe, Varsovie. Nexus Algérie, Alger. <a href="mailto:contact@abboute.com">contact@abboute.com</a></p>
     </div>
-    <form class="form" id="contactForm" novalidate>
-      <div class="field"><input id="cf-name" name="name" required placeholder=" " autocomplete="name"><label for="cf-name">Nom et prénom</label></div>
-      <div class="field"><input id="cf-mail" name="email" type="email" required placeholder=" " autocomplete="email"><label for="cf-mail">E-mail professionnel</label></div>
-      <div class="field"><input id="cf-co" name="company" placeholder=" " autocomplete="organization"><label for="cf-co">Entreprise</label></div>
-      <fieldset class="need"><legend>Votre besoin</legend>
-        <label><input type="radio" name="need" value="CRM" checked><span>CRM</span></label>
-        <label><input type="radio" name="need" value="Comptabilité et facturation"><span>Comptabilité</span></label>
-        <label><input type="radio" name="need" value="Gestion de projet"><span>Gestion de projet</span></label>
-        <label><input type="radio" name="need" value="Logiciel sur mesure"><span>Sur mesure</span></label>
+
+    <form class="cfg" id="cfg" novalidate>
+      <div class="cfg-top"><button type="button" class="cfg-back" id="cfgBack" aria-label="Question précédente" disabled><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+        <div class="cfg-prog" aria-hidden="true"><i id="cfgProg"></i></div><span class="cfg-count" id="cfgCount">1 sur 5</span></div>
+
+      <fieldset class="cfg-step on" data-step="need">
+        <legend>De quoi avez-vous besoin&nbsp;?</legend>
+        <p class="cfg-hint">Plusieurs choix possibles.</p>
+        <div class="tiles"><label class="tile"><input type="checkbox" name="need" value="Conseil et transformation"><span class="tile-in"><kbd>1</kbd><svg viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg><b>Conseil et transformation</b></span></label><label class="tile"><input type="checkbox" name="need" value="Conception de logiciels"><span class="tile-in"><kbd>2</kbd><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4m8-8l4 4-4 4M13.5 5l-3 14"/></svg><b>Conception de logiciels</b></span></label><label class="tile"><input type="checkbox" name="need" value="Formation"><span class="tile-in"><kbd>3</kbd><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><b>Formation</b></span></label><label class="tile"><input type="checkbox" name="need" value="Externalisation"><span class="tile-in"><kbd>4</kbd><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6m1-5.5c3 0 5 2 5 5"/></svg><b>Externalisation</b></span></label><label class="tile"><input type="checkbox" name="need" value="Matériel et infrastructure"><span class="tile-in"><kbd>5</kbd><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8m-4-4v4"/></svg><b>Matériel et infrastructure</b></span></label><label class="tile"><input type="checkbox" name="need" value="Je ne sais pas encore, conseillez-moi"><span class="tile-in"><kbd>6</kbd><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17.5h.01"/></svg><b>Je ne sais pas encore, conseillez-moi</b></span></label></div>
+        <button type="button" class="btn btn-primary cfg-next" disabled>Continuer</button>
       </fieldset>
-      <div class="field"><textarea id="cf-msg" name="message" rows="4" required placeholder=" "></textarea><label for="cf-msg">Votre projet en quelques lignes</label></div>
-      <button class="btn btn-primary" type="submit">Préparer l'e-mail</button>
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+      <fieldset class="cfg-step" data-step="stage">
+        <legend>Où en est votre projet&nbsp;?</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="stage" value="Une idée à explorer"><span><kbd>1</kbd>Une idée à explorer</span></label><label class="opt"><input type="radio" name="stage" value="Un besoin précis"><span><kbd>2</kbd>Un besoin précis</span></label><label class="opt"><input type="radio" name="stage" value="Une urgence"><span><kbd>3</kbd>Une urgence</span></label></div>
+      </fieldset>
+
+      <fieldset class="cfg-step" data-step="size">
+        <legend>Quelle est la taille de votre entreprise&nbsp;?</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="size" value="1 à 10 personnes"><span><kbd>1</kbd>1 à 10 personnes</span></label><label class="opt"><input type="radio" name="size" value="11 à 50 personnes"><span><kbd>2</kbd>11 à 50 personnes</span></label><label class="opt"><input type="radio" name="size" value="51 à 250 personnes"><span><kbd>3</kbd>51 à 250 personnes</span></label><label class="opt"><input type="radio" name="size" value="Plus de 250 personnes"><span><kbd>4</kbd>Plus de 250 personnes</span></label></div>
+      </fieldset>
+
+      <fieldset class="cfg-step" data-step="when">
+        <legend>Quand souhaitez-vous démarrer&nbsp;?</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="when" value="Dès que possible"><span><kbd>1</kbd>Dès que possible</span></label><label class="opt"><input type="radio" name="when" value="Dans 1 à 3 mois"><span><kbd>2</kbd>Dans 1 à 3 mois</span></label><label class="opt"><input type="radio" name="when" value="Plus tard, je me renseigne"><span><kbd>3</kbd>Plus tard, je me renseigne</span></label></div>
+      </fieldset>
+
+      <fieldset class="cfg-step" data-step="who">
+        <legend>Où vous envoyer notre réponse&nbsp;?</legend>
+        <div class="cfg-fields">
+          <div class="field"><input id="cf-name" name="name" required placeholder=" " autocomplete="name"><label for="cf-name">Nom et prénom</label></div>
+          <div class="field"><input id="cf-mail" name="email" type="email" required placeholder=" " autocomplete="email"><label for="cf-mail">E-mail professionnel</label></div>
+          <div class="field"><input id="cf-co" name="company" placeholder=" " autocomplete="organization"><label for="cf-co">Entreprise</label></div>
+          <div class="field"><input id="cf-msg" name="message" placeholder=" "><label for="cf-msg">Un mot sur le projet (facultatif)</label></div>
+        </div>
+        <button type="submit" class="btn btn-primary cfg-next">Générer mon brief</button>
+        <p class="cfg-err" id="cfgErr" role="alert"></p>
+      </fieldset>
+
+      <div class="cfg-step cfg-done" data-step="done" tabindex="-1">
+        <svg class="done-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
+        <h3>Votre brief est prêt.</h3>
+        <p>Il ne reste qu'à l'envoyer&nbsp;: votre messagerie s'ouvre avec tout prérempli.</p>
+        <dl class="done-sum" id="doneSum"></dl>
+        <div class="done-actions">
+          <a class="btn btn-primary" id="cfgSend" href="#">Envoyer le brief</a>
+          <button type="button" class="btn btn-ghost" id="cfgCopy">Copier le brief</button>
+        </div>
+        <button type="button" class="cfg-restart" id="cfgEdit">Modifier mes réponses</button>
+      </div>
+      <p class="cfg-keys" aria-hidden="true">Astuce&nbsp;: répondez avec les touches <kbd>1</kbd> à <kbd>6</kbd>, validez avec <kbd>Entrée</kbd>.</p>
     </form>
   </div>
 </section>
@@ -268,14 +331,14 @@ compta.<span class="f">passerEcriture</span>(facture, <span class="s">'706'</spa
 </main>
 
 <footer class="footer">
-  <div class="foot-giant" aria-hidden="true"><div class="fg-track"><span>ABBOUTE</span><span>ABBOUTE</span><span>ABBOUTE</span><span>ABBOUTE</span></div></div>
+  <div class="foot-giant" aria-hidden="true"><div class="fg-track"><span>nexus</span><span>nexus</span><span>nexus</span><span>nexus</span><span>nexus</span><span>nexus</span></div></div>
   <div class="wrap foot-cols">
-    <div class="foot-brand"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">ABBOUTE</span></div>
-    <nav class="foot-col" aria-label="Pied de page"><a href="#solutions">Solutions</a><a href="#demo">Démo</a><a href="#methode">Méthode</a><a href="#normes">Normes</a></nav>
-    <div class="foot-col"><span class="fh">Bureaux</span><span>Varsovie, Pologne</span><span>Alger, Algérie</span></div>
+    <div class="foot-brand"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">nexus</span></div>
+    <nav class="foot-col" aria-label="Pied de page"><a href="#metiers">Métiers</a><a href="#methode">Méthode</a><a href="#demo">Réalisation</a><a href="#expertise">Expertise</a></nav>
+    <div class="foot-col"><span class="fh">Bureaux</span><span>Nexus Europe, Varsovie</span><span>Nexus Algérie, Alger</span></div>
     <div class="foot-col"><span class="fh">Contact</span><a href="mailto:contact@abboute.com">contact@abboute.com</a></div>
   </div>
-  <div class="wrap foot-base"><span>© 2026 ABBOUTE</span><span>Logiciels de gestion pour entreprises</span></div>
+  <div class="wrap foot-base"><span>© 2026 Nexus</span><span>Conseil, logiciels, formation, externalisation, matériel</span></div>
 </footer>
 
 </body>
