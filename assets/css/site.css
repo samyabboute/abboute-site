@@ -52,9 +52,9 @@ img,svg{display:block}
 /* Chargement */
 .loader{position:fixed;inset:0;z-index:500;background:var(--mist);display:grid;place-items:center;transition:opacity .6s ease .1s,visibility 0s .7s}
 .loader.out{opacity:0;visibility:hidden}
-.loader-mark{width:60px;height:60px}
-.lm-path{fill:none;stroke:var(--ink);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:90;stroke-dashoffset:90;animation:draw .7s var(--ease) .05s forwards}
-.lm-node{fill:var(--blue);transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .45s var(--ease) .55s forwards}
+.loader-mark{width:64px;height:64px}
+.loader-mark{color:var(--ink);clip-path:circle(0% at 50% 50%);transform:rotate(-140deg) scale(.86);animation:lmIn .9s var(--ease) .05s forwards}
+@keyframes lmIn{to{clip-path:circle(72% at 50% 50%);transform:none}}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes pop{to{transform:scale(1)}}
 .progress{position:fixed;left:0;right:0;top:0;height:2px;z-index:200;pointer-events:none}
@@ -68,10 +68,11 @@ img,svg{display:block}
 .nav.dark-sec{color:#fff}
 .nav.dark-sec::before{opacity:1;background:rgba(11,13,18,.86);box-shadow:0 1px 0 rgba(255,255,255,.08)}
 .nav.hide{transform:translateY(-100%)}
-.brand{display:flex;align-items:center;gap:11px}
-.brand-mark{width:30px;height:30px}
-.brand-word{display:inline-flex;align-items:baseline;gap:8px;font-weight:750;font-size:19px;letter-spacing:.07em;line-height:1}
-.brand-word small{font-size:12.5px;font-weight:500;letter-spacing:.01em;opacity:.6}
+.brand{display:flex;align-items:center;gap:11px;color:inherit}
+.brand-mark{width:33px;height:33px;flex:none;transition:transform .8s var(--ease)}
+.brand:hover .brand-mark{transform:rotate(-24deg)}
+.brand-rule{width:1.6px;height:32px;background:currentColor;flex:none}
+.brand-word{height:29px;width:auto;aspect-ratio:476/132;flex:none}
 .nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
 .nav-links>a:not(.btn){font-size:14.5px;font-weight:500;opacity:.75;transition:opacity .2s;position:relative;padding:6px 0}
 .nav-links>a:not(.btn):hover,.nav-links>a.active{opacity:1}
@@ -288,7 +289,7 @@ img,svg{display:block}
 .foot-col{display:flex;flex-direction:column;gap:9px;font-size:14.5px;color:#a7adbb}
 .foot-col a:hover{color:#fff}
 .fh{color:#fff;font-weight:600;margin-bottom:4px}
-.foot-giant{font-weight:750;font-size:clamp(4.6rem,18vw,18rem);letter-spacing:-.06em;line-height:.8;color:#161a23;text-align:center;margin-top:clamp(40px,6vw,90px);user-select:none}
+.foot-giant{display:block;width:min(100%,1400px);margin-inline:auto;padding:0 var(--gut);box-sizing:border-box;overflow:visible;height:auto;aspect-ratio:474/65;color:#161a23;margin-top:clamp(40px,6vw,90px);user-select:none}
 .foot-base{display:flex;justify-content:space-between;padding-top:22px;padding-bottom:26px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;color:#6b7282}
 
 /* Apparitions */
@@ -352,7 +353,7 @@ img,svg{display:block}
   .mob-cta.show{transform:none}
 }
 @media(max-width:560px){
-  .nav .brand-word small{display:none}
+  .nav .brand-word{height:24px}.nav .brand-mark{width:28px;height:28px}.nav .brand-rule{height:26px}
   .tile-in{min-height:90px;padding:14px}
   .done-sum>div{grid-template-columns:92px 1fr}
 }
@@ -361,8 +362,11 @@ img,svg{display:block}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .hl>span,.hero-lede,.hero-actions,.hero-facts{transform:none!important;opacity:1!important}
   .js-reveal [data-reveal],.js-reveal [data-reveal-list]>*{opacity:1;transform:none;filter:none}
-  .lm-path{stroke-dashoffset:0}.lm-node{transform:none}
+  .loader-mark{clip-path:none;transform:none;animation:none}
   .mf-text .w{color:#fff}
 }
 @media(hover:hover){.tile-in{padding-right:44px}}
 @media(max-width:900px){.hero-title{font-size:clamp(2.4rem,10.6vw,4.4rem)}}
+
+.foot-brand .brand-mark{width:44px;height:44px}.foot-brand .brand-rule{height:42px}.foot-brand .brand-word{height:38px}
+@media(max-width:560px){.foot-cols{grid-template-columns:1fr;gap:36px}.foot-cols>*{min-width:0}}
