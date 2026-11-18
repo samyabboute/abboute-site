@@ -350,3 +350,78 @@ img,svg{display:block}
   .lm-path{stroke-dashoffset:0}.lm-node{transform:none}
   .mf-text .w{color:inherit}
 }
+
+/* ===== Version vivante et émotionnelle ===== */
+#contenu{transition:opacity .22s ease}
+#contenu.lang-out{opacity:0}
+.lang{height:32px;min-width:38px;padding:0 9px;border-radius:6px;border:1px solid currentColor;background:none;font-size:12.5px;font-weight:650;letter-spacing:.04em;cursor:pointer;opacity:.7;transition:opacity .2s,background .2s}
+.lang:hover{opacity:1}
+.sec-blue{background:var(--blue);color:#fff}
+.sec-blue .lede{color:rgba(255,255,255,.82)}
+.sec-blue .demo-note{color:rgba(255,255,255,.7)}
+.demo .app{box-shadow:0 0 0 1px rgba(255,255,255,.18),0 50px 100px -40px rgba(5,10,60,.75)}
+
+/* Manifeste sur bleu */
+.manifesto{background:var(--blue);color:#fff;padding:clamp(120px,15vw,230px) 0}
+.mf-text .w{color:rgba(255,255,255,.32)}
+
+/* Une journée avec Nexus */
+.day{position:relative;height:520vh}
+.day-pin{position:sticky;top:0;height:100svh;overflow:hidden;background:rgb(14,22,48);color:#fff;display:flex;align-items:center}
+.day-inner{width:100%;display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:auto 1fr auto;column-gap:clamp(30px,5vw,90px);row-gap:28px;height:100%;padding-top:110px;padding-bottom:56px}
+.day-title{grid-column:1/-1;font-weight:550;font-size:15px;letter-spacing:0;color:rgba(255,255,255,.72)}
+.day-clock{align-self:center;font-weight:600;font-size:clamp(5.2rem,15vw,15rem);line-height:.85;letter-spacing:-.06em;font-variant-numeric:tabular-nums}
+.scenes{list-style:none;position:relative;align-self:center;min-height:15em}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:20px;opacity:0;transform:translateY(34px);transition:opacity .7s var(--ease),transform .9s var(--ease);pointer-events:none}
+.scene.on{opacity:1;transform:none}
+.scene-tag{align-self:flex-start;font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.14)}
+.scene-txt{font-weight:550;font-size:clamp(1.7rem,3.1vw,3.1rem);line-height:1.12;letter-spacing:-.035em;max-width:17ch}
+.day-rail{grid-column:1/-1;height:2px;background:rgba(255,255,255,.18);border-radius:2px;overflow:hidden}
+.day-rail i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left}
+
+/* Modes d'engagement sur fond encre */
+.engagement .eng-grid{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.1)}
+.engagement .eng{background:var(--ink)}
+.engagement .eng:hover{background:var(--ink-2)}
+.engagement .eng p{color:#a7adbb}
+.engagement .eng-fit{border-top-color:rgba(255,255,255,.1);color:#fff!important}
+.engagement .eng-fit span{color:#7f8799}
+.engagement .eng-fit em{font-style:normal}
+
+/* Contact sur fond encre */
+.contact .lede{color:#a7adbb}
+.contact .brief{background:var(--blue)}
+.contact .brief dt{color:rgba(255,255,255,.65)}
+.contact .brief dd{color:rgba(255,255,255,.45)}
+.contact .brief .set dd{color:#fff}
+.contact .brief dl>div{border-top-color:rgba(255,255,255,.18)}
+.contact .brief-bar{background:rgba(255,255,255,.2)}
+.contact .brief-bar i{background:#fff}
+.contact .brief.ready{box-shadow:0 0 0 2px #fff,0 30px 70px -20px rgba(31,59,255,.8)}
+.contact .brief.ready .brief-state{background:#fff;color:var(--blue)}
+.contact .brief .flash{animation:flashrow2 .8s var(--ease)}
+@keyframes flashrow2{0%{background:rgba(255,255,255,.25)}100%{background:transparent}}
+.contact .direct{color:#a7adbb}
+.contact .copy-mail{color:#fff}
+.contact .copy-mail span{background:rgba(255,255,255,.12);color:#fff}
+.contact .copy-mail:hover span{background:rgba(255,255,255,.2)}
+.opt em,.tile-in b{font-style:normal}
+.eng-fit em{font-style:normal}
+
+@media(max-width:900px){
+  .day{height:480vh}
+  .day-inner{grid-template-columns:1fr;grid-template-rows:auto auto 1fr auto;padding-top:96px;padding-bottom:40px;row-gap:18px}
+  .day-clock{font-size:clamp(4.4rem,24vw,8rem);align-self:end}
+  .scenes{align-self:start;min-height:11em}
+  .scene{justify-content:flex-start}
+  .nav-links .lang{order:-1;align-self:flex-start;color:#fff;height:36px;margin-bottom:6px}
+}
+@media(prefers-reduced-motion:reduce){
+  .day{height:auto}
+  .day-pin{position:static;height:auto;padding:100px 0}
+  .day-clock,.day-rail{display:none}
+  .scenes{min-height:0;display:grid;gap:40px}
+  .scene{position:static;opacity:1;transform:none}
+  .mf-text .w{color:#fff}
+}
+.cfg{color:var(--ink)}
