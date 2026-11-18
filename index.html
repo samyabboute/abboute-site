@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ABBOUTE Technologies | L'expertise informatique européenne au service des entreprises algériennes</title>
-<meta name="description" content="ABBOUTE Technologies accompagne les entreprises algériennes avec les méthodes des grands groupes européens : conseil, logiciels, formation, infogérance et équipement. Bureaux à Alger et à Varsovie.">
-<meta name="theme-color" content="#0b0d12">
+<title>ABBOUTE Global Trading | Europe and Algeria, one group</title>
+<meta name="description" content="ABBOUTE Global Trading connects Europe and Algeria: sourcing and import-export, construction and machinery, food and agriculture, industry, technology and finance, fashion and beauty.">
+<meta name="theme-color" content="#f5f6f8">
 <link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%230b0d12'/%3E%3Cpath d='M11 37L24 12l13 25M16.5 29h15' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='24' cy='11' r='4.8' fill='%231f3bff'/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/site.css">
 <link rel="preload" href="assets/js/land.bin" as="fetch" type="application/octet-stream" crossorigin>
-<script>try{var l=localStorage.getItem('nx-lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl'}else if(l==='en'){document.documentElement.lang='en'}}catch(e){}</script>
+<script>try{var l=localStorage.getItem('abb-lang');if(l==='fr'||l==='de')document.documentElement.lang=l}catch(e){}</script>
 <script defer src="assets/js/i18n.js"></script>
 <script defer src="assets/vendor/gsap.min.js"></script>
 <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
@@ -31,319 +31,218 @@
 <div class="loader" id="loader" aria-hidden="true">
   <svg class="loader-mark" viewBox="0 0 48 48"><path class="lm-path" d="M11 37L24 12l13 25M16.5 29h15"/><circle class="lm-node" cx="24" cy="11" r="4.8"/></svg>
 </div>
-<a class="skip" href="#contenu" data-i18n="k183">Aller au contenu</a>
+<a class="skip" href="#contenu" data-i18n="k146">Skip to content</a>
 <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 <header class="nav" id="nav">
-  <a href="#top" class="brand" aria-label="ABBOUTE Technologies, accueil" data-i18n-attr="aria-label:k6">
+  <a href="#top" class="brand" aria-label="ABBOUTE Global Trading, home" data-i18n-attr="aria-label:k6">
     <svg class="brand-mark"><use href="#mark"/></svg>
-    <span class="brand-word">ABBOUTE<small>Technologies</small></span>
+    <span class="brand-word">ABBOUTE<small>Global Trading</small></span>
   </a>
-  <nav class="nav-links" id="navLinks" aria-label="Navigation principale" data-i18n-attr="aria-label:k7">
-    <a href="#services" data-i18n="k1">Services</a>
-    <a href="#realisations" data-i18n="k2">Réalisations</a>
-    <a href="#europe" data-i18n="k3">Pourquoi l'Europe</a>
-    <a href="#engagement" data-i18n="k4">Collaborer</a>
-    <div class="langs" role="group" aria-label="Langue / Language / اللغة">
-      <button type="button" data-lang="fr" lang="fr" aria-pressed="true">FR</button>
-      <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
-      <button type="button" data-lang="ar" lang="ar" aria-pressed="false">ع</button>
+  <nav class="nav-links" id="navLinks" aria-label="Main navigation" data-i18n-attr="aria-label:k7">
+    <a href="#divisions" data-i18n="k1">Divisions</a>
+    <a href="#corridor" data-i18n="k2">How it works</a>
+    <a href="#two-ways" data-i18n="k3">Both ways</a>
+    <a href="#why" data-i18n="k4">Why ABBOUTE</a>
+    <div class="langs" role="group" aria-label="Language / Langue / Sprache">
+      <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" lang="fr" aria-pressed="false">FR</button>
+      <button type="button" data-lang="de" lang="de" aria-pressed="false">DE</button>
     </div>
-    <a href="#contact" class="btn btn-primary btn-sm nav-cta" data-i18n="k5">Lancer un projet</a>
+    <a href="#contact" class="btn btn-primary btn-sm nav-cta" data-i18n="k5">Start a request</a>
   </nav>
-  <button class="burger" id="burger" aria-label="Ouvrir le menu" data-i18n-attr="aria-label:k8" aria-expanded="false"><span></span><span></span></button>
+  <button class="burger" id="burger" aria-label="Open menu" data-i18n-attr="aria-label:k8" aria-expanded="false"><span></span><span></span></button>
 </header>
 <main id="contenu">
 <section class="hero" id="top">
-  <canvas class="globe" id="globe" role="img" aria-label="Globe reliant les équipes ABBOUTE de Varsovie, Paris et Berlin à Alger, Oran et Constantine. Faites-le glisser pour le tourner." data-i18n-attr="aria-label:k10"></canvas>
+  <canvas class="globe" id="globe" role="img" aria-label="Globe linking every European capital to Algiers. Drag to rotate it." data-i18n-attr="aria-label:k9"></canvas>
   <div class="globe-labels" id="globeLabels" aria-hidden="true"></div>
   <div class="hero-inner">
     <h1 class="hero-title">
-      <span class="hl"><span data-i18n="k11">L'expertise européenne.</span></span>
-      <span class="hl"><span data-i18n="k12">Au service des</span></span>
-      <span class="hl"><span data-i18n="k13">entreprises algériennes.</span></span>
+      <span class="hl"><span data-i18n="k10">We source.</span></span>
+      <span class="hl"><span data-i18n="k11">We build.</span></span>
+      <span class="hl hl-blue"><span data-i18n="k12">We deliver.</span></span>
     </h1>
-    <p class="hero-lede" data-i18n="k14">ABBOUTE Technologies conseille, développe, forme et équipe les entreprises algériennes avec les méthodes et les standards des grands groupes européens. Une équipe à Alger, des ingénieurs à Varsovie, un seul objectif&nbsp;: que votre entreprise travaille mieux.</p>
+    <p class="hero-lede" data-i18n="k13">ABBOUTE Global Trading connects Europe and Algeria. Six divisions, one partner, from the first quote to the final delivery.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary"><span data-i18n="k9">Lancer votre projet</span> <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5"/></svg></a>
-      <a href="#services" class="btn btn-secondary" data-i18n="k15">Découvrir nos services</a>
+      <a href="#contact" class="btn btn-primary"><span data-i18n="k5">Start a request</span> <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5"/></svg></a>
+      <a href="#divisions" class="btn btn-secondary" data-i18n="k14">Explore our divisions</a>
     </div>
   </div>
   <dl class="hero-facts">
-    <div><dt data-i18n="k16">Présence</dt><dd data-i18n="k17">Alger et Varsovie</dd></div>
-    <div><dt data-i18n="k18">Langues de travail</dt><dd data-i18n="k19">Français, arabe, anglais</dd></div>
-    <div><dt data-i18n="k20">Facturation</dt><dd data-i18n="k21">En dinars, par ABBOUTE Algérie</dd></div>
+    <div><dt data-i18n="k15">Corridor</dt><dd data-i18n="k16">Europe ⇄ Algeria</dd></div>
+    <div><dt data-i18n="k17">Divisions</dt><dd data-i18n="k18">Six, under one roof</dd></div>
+    <div><dt data-i18n="k19">Offices</dt><dd data-i18n="k20">Algiers and Warsaw</dd></div>
   </dl>
 </section>
-<section class="manifesto" aria-label="Notre conviction" data-i18n-attr="aria-label:k22">
+<section class="statement" aria-label="What we do" data-i18n-attr="aria-label:k21">
   <div class="wrap">
-    <p class="mf-text" id="manifesto" data-i18n="k23">Les grandes entreprises européennes ne sont pas plus intelligentes. Elles sont mieux outillées, mieux organisées, mieux formées. Nous apportons la même méthode chez vous, en français et en arabe, à deux pas de vos bureaux.</p>
+    <p class="mf-text" id="manifesto" data-i18n="k22">From a single spare part to a complete production line. From Europe to Algeria, and back again.</p>
   </div>
 </section>
-<section class="ba sec" id="avant-apres">
+<section class="divisions sec" id="divisions">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <h2 class="h2" data-i18n="k42">Ce qui change dans votre quotidien.</h2>
+      <h2 class="h2" data-i18n="k54">Six divisions. One group.</h2>
+      <p class="lede" data-i18n="k55">Whatever your sector, the same promise: we find it, we check it, we bring it to you.</p>
+    </div>
+    <div class="div-grid" data-reveal-list>
+      <article class="div-card div-trading">
+        <div class="div-top"><span class="div-sector" data-i18n="k27">Sourcing & import-export</span><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44" class="s2"/><path d="M16 60h88M60 16c-14 14-14 74 0 88M60 16c14 14 14 74 0 88" class="s2"/><path d="M30 38c14 6 46 6 60 0M30 82c14-6 46-6 60 0" class="s2"/><circle cx="34" cy="44" r="5" class="f"/><circle cx="82" cy="78" r="5" class="f"/><path d="M34 44C50 30 74 52 82 78" class="s1 dash"/></svg></div>
+        <h3 class="div-name">ABBOUTE Trading</h3>
+        <p class="div-tag" data-i18n="k28">Sourcing and import-export between Europe and Algeria.</p>
+        <ul class="div-list"><li data-i18n="k23">Supplier search and negotiation across Europe</li><li data-i18n="k24">Quality inspection before shipment</li><li data-i18n="k25">Freight, customs and delivery to your door</li><li data-i18n="k26">Algerian products exported to Europe</li></ul>
+      </article>
+      <article class="div-card div-build">
+        <div class="div-top"><span class="div-sector" data-i18n="k32">Construction & machinery</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 96h92" class="s2"/><path d="M26 96V70h34v26" class="s2"/><path d="M60 78l22-40 10 6-18 34" class="s1"/><path d="M82 38l20-14" class="s1"/><path d="M102 24v28" class="s2 dash"/><rect x="96" y="52" width="12" height="9" rx="1.5" class="f"/><circle cx="34" cy="96" r="6" class="s2"/><circle cx="52" cy="96" r="6" class="s2"/></svg></div>
+        <h3 class="div-name">ABBOUTE Build</h3>
+        <p class="div-tag" data-i18n="k33">Construction machinery, equipment and building materials.</p>
+        <ul class="div-list"><li data-i18n="k29">New and used construction machinery</li><li data-i18n="k30">Building materials and finishing</li><li data-i18n="k31">Spare parts and maintenance</li></ul>
+      </article>
+      <article class="div-card div-agro">
+        <div class="div-top"><span class="div-sector" data-i18n="k37">Food & agriculture</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 104V44" class="s1"/><path d="M60 64c-16-2-26-14-26-30 16 2 26 14 26 30zM60 54c16-2 26-14 26-30-16 2-26 14-26 30z" class="s2"/><path d="M60 84c-14-2-22-12-22-24 14 2 22 12 22 24zM60 76c14-2 22-12 22-24-14 2-22 12-22 24z" class="s2"/><circle cx="60" cy="30" r="5" class="f"/></svg></div>
+        <h3 class="div-name">ABBOUTE Agro</h3>
+        <p class="div-tag" data-i18n="k38">Food and agriculture, in both directions.</p>
+        <ul class="div-list"><li data-i18n="k34">Food imports from European producers</li><li data-i18n="k35">Algerian dates and olive oil for Europe</li><li data-i18n="k36">Farm machinery and irrigation</li></ul>
+      </article>
+      <article class="div-card div-industries">
+        <div class="div-top"><span class="div-sector" data-i18n="k42">Industry</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 98V58l24 14V58l24 14V58l24 14V34h20v64z" class="s2"/><path d="M92 34V18h8v16" class="s2"/><circle cx="96" cy="12" r="4" class="f pulse"/><path d="M26 86h10M48 86h10M70 86h10" class="s1"/></svg></div>
+        <h3 class="div-name">ABBOUTE Industries</h3>
+        <p class="div-tag" data-i18n="k43">Equipment and inputs for manufacturers.</p>
+        <ul class="div-list"><li data-i18n="k39">Production lines and industrial equipment</li><li data-i18n="k40">Raw materials and components</li><li data-i18n="k41">Installation and commissioning</li></ul>
+      </article>
+      <article class="div-card div-tech">
+        <div class="div-top"><span class="div-sector" data-i18n="k47">Technology & finance</span><svg viewBox="0 0 120 120" aria-hidden="true"><rect x="16" y="24" width="88" height="58" rx="6" class="s2"/><path d="M44 96h32M60 82v14" class="s2"/><path d="M28 66l16-14 12 8 20-20 16 10" class="s1"/><circle cx="92" cy="50" r="5" class="f"/><path d="M28 40h22" class="s2 dash"/></svg></div>
+        <h3 class="div-name">ABBOUTE Tech &amp; Finance</h3>
+        <p class="div-tag" data-i18n="k48">Technology for companies, and the financial structure behind every deal.</p>
+        <ul class="div-list"><li data-i18n="k44">IT equipment, software and digital transformation</li><li data-i18n="k45">International payments structured with partner banks</li><li data-i18n="k46">Letters of credit and payment security advice</li></ul>
+      </article>
+      <article class="div-card div-fashion">
+        <div class="div-top"><span class="div-sector" data-i18n="k52">Fashion & beauty</span><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M60 22a8 8 0 1 1 8 8c-4 0-8 3-8 7v5L18 74c-4 2-2 8 2 8h80c4 0 6-6 2-8L60 42" class="s2"/><path d="M40 94h40" class="s1"/><circle cx="96" cy="26" r="4" class="f"/></svg></div>
+        <h3 class="div-name">Maison Ilyane</h3>
+        <p class="div-tag" data-i18n="k53">Fashion and beauty from European houses, for the Algerian market.</p>
+        <ul class="div-list"><li data-i18n="k49">Ready-to-wear and accessories</li><li data-i18n="k50">Cosmetics and fragrance</li><li data-i18n="k51">Algerian designers presented in Europe</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="corridor sec" id="corridor">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 class="h2" data-i18n="k66">How a request travels.</h2>
+      <p class="lede" data-i18n="k67">One contact, one contract, five steps. You follow every stage until the goods arrive.</p>
+    </div>
+    <div class="route" id="route" aria-hidden="true"><div class="route-line"><i id="routeFill"></i></div><div class="route-box" id="routeBox"><svg viewBox="0 0 40 24"><rect x="1" y="3" width="38" height="18" rx="2"/><path d="M9 3v18M17 3v18M25 3v18M33 3v18"/></svg></div></div>
+    <ol class="csteps" id="csteps"><li class="cstep"><span class="cstep-n">1</span><h3 data-i18n="k56">Request</h3><p data-i18n="k57">You tell us what you need, in one message.</p></li><li class="cstep"><span class="cstep-n">2</span><h3 data-i18n="k58">Sourcing</h3><p data-i18n="k59">We find and negotiate with the right European suppliers.</p></li><li class="cstep"><span class="cstep-n">3</span><h3 data-i18n="k60">Inspection</h3><p data-i18n="k61">Quality is checked at the source, before anything ships.</p></li><li class="cstep"><span class="cstep-n">4</span><h3 data-i18n="k62">Shipping</h3><p data-i18n="k63">Sea, road or air freight, customs clearance included.</p></li><li class="cstep"><span class="cstep-n">5</span><h3 data-i18n="k64">Delivery</h3><p data-i18n="k65">Delivered to your site in Algeria, invoiced locally.</p></li></ol>
+  </div>
+</section>
+<section class="twoways sec" id="two-ways">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <h2 class="h2" data-i18n="k68">Both ways.</h2>
       <div>
-        <p class="lede" data-i18n="k43">Basculez pour voir la différence. C’est ce que vivent les entreprises qui se modernisent.</p>
-        <div class="ba-switch" role="group" aria-label="Comparer" data-i18n-attr="aria-label:k44">
-          <button type="button" data-ba="before" aria-pressed="true" data-i18n="k45">Aujourd'hui</button>
-          <button type="button" data-ba="after" aria-pressed="false" data-i18n="k46">Avec ABBOUTE</button>
-          <i class="ba-thumb" aria-hidden="true"></i>
+        <p class="lede" data-i18n="k69">We bring Europe to Algeria, and Algeria to Europe.</p>
+        <div class="way-switch" role="group" aria-label="Choose a direction" data-i18n-attr="aria-label:k70">
+          <button type="button" data-way="e2a" aria-pressed="true" data-i18n="k71">Europe → Algeria</button>
+          <button type="button" data-way="a2e" aria-pressed="false" data-i18n="k72">Algeria → Europe</button>
+          <i class="way-thumb" aria-hidden="true"></i>
         </div>
       </div>
     </div>
-    <div class="ba-grid" id="baGrid" data-reveal-list>
-      <article class="ba-card"><div class="ba-inner">
-        <div class="ba-face ba-before"><span class="ba-tag" data-i18n="k24">Ventes</span><p data-i18n="k25">Les clients sont suivis dans des cahiers et des fichiers Excel.</p></div>
-        <div class="ba-face ba-after" aria-hidden="true"><span class="ba-tag" data-i18n="k24">Ventes</span><p data-i18n="k26">Chaque client, chaque devis, chaque relance dans un seul CRM, sur ordinateur et sur téléphone.</p></div>
-      </div></article>
-      <article class="ba-card"><div class="ba-inner">
-        <div class="ba-face ba-before"><span class="ba-tag" data-i18n="k27">Facturation</span><p data-i18n="k28">Les factures sont saisies, puis ressaisies en comptabilité.</p></div>
-        <div class="ba-face ba-after" aria-hidden="true"><span class="ba-tag" data-i18n="k27">Facturation</span><p data-i18n="k29">Les factures partent en un clic et la comptabilité SCF suit toute seule.</p></div>
-      </div></article>
-      <article class="ba-card"><div class="ba-inner">
-        <div class="ba-face ba-before"><span class="ba-tag" data-i18n="k30">Paie</span><p data-i18n="k31">La paie mobilise une personne pendant plusieurs jours chaque mois.</p></div>
-        <div class="ba-face ba-after" aria-hidden="true"><span class="ba-tag" data-i18n="k30">Paie</span><p data-i18n="k32">Bulletins, cotisations CNAS et IRG calculés en quelques minutes.</p></div>
-      </div></article>
-      <article class="ba-card"><div class="ba-inner">
-        <div class="ba-face ba-before"><span class="ba-tag" data-i18n="k33">Paiements</span><p data-i18n="k34">Vos clients paient par chèque ou en espèces.</p></div>
-        <div class="ba-face ba-after" aria-hidden="true"><span class="ba-tag" data-i18n="k33">Paiements</span><p data-i18n="k35">Paiement en ligne par carte CIB et Edahabia, rapproché automatiquement.</p></div>
-      </div></article>
-      <article class="ba-card"><div class="ba-inner">
-        <div class="ba-face ba-before"><span class="ba-tag" data-i18n="k36">Informatique</span><p data-i18n="k37">Une panne d’ordinateur bloque une équipe pendant des jours.</p></div>
-        <div class="ba-face ba-after" aria-hidden="true"><span class="ba-tag" data-i18n="k36">Informatique</span><p data-i18n="k38">Un support qui répond, un parc surveillé, des sauvegardes chaque nuit.</p></div>
-      </div></article>
-      <article class="ba-card"><div class="ba-inner">
-        <div class="ba-face ba-before"><span class="ba-tag" data-i18n="k39">Équipes</span><p data-i18n="k40">Les nouveaux outils restent inutilisés, faute de formation.</p></div>
-        <div class="ba-face ba-after" aria-hidden="true"><span class="ba-tag" data-i18n="k39">Équipes</span><p data-i18n="k41">Chaque équipe est formée, en français ou en arabe, et adopte ses outils.</p></div>
-      </div></article>
+    <div class="ways" id="ways">
+      <ul class="way-list on" data-way-list="e2a"><li><span data-i18n="k73">Construction machinery</span></li><li><span data-i18n="k74">Industrial equipment</span></li><li><span data-i18n="k75">Building materials</span></li><li><span data-i18n="k76">Food products</span></li><li><span data-i18n="k77">IT equipment</span></li><li><span data-i18n="k78">Fashion and cosmetics</span></li></ul>
+      <ul class="way-list" data-way-list="a2e" aria-hidden="true"><li><span data-i18n="k79">Deglet Nour dates</span></li><li><span data-i18n="k80">Olive oil</span></li><li><span data-i18n="k81">Fresh produce</span></li><li><span data-i18n="k82">Crafts and textiles</span></li><li><span data-i18n="k83">Stone and ceramics</span></li><li><span data-i18n="k84">Algerian fashion</span></li></ul>
     </div>
   </div>
 </section>
-<section class="services sec" id="services">
-  <div class="wrap services-grid">
-    <div class="sec-side" data-reveal>
-      <h2 class="h2" data-i18n="k77">Cinq métiers. Une seule équipe.</h2>
-      <p class="lede" data-i18n="k78">Conseil, logiciels, formation, infogérance et matériel, sous un même toit et une seule responsabilité. Ouvrez un métier pour voir ce que nous livrons.</p>
-    </div>
-    <ul class="svc-list" data-reveal-list>
-      <li class="svc">
-        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-conseil">
-          <span class="svc-title" data-i18n="k51">Conseil et transformation numérique</span>
-          <span class="svc-plus" aria-hidden="true"></span>
-        </button>
-        <p class="svc-lede" data-i18n="k52">Nous mesurons où en est votre entreprise et fixons les priorités, avec la méthode des cabinets européens, avant d’engager le moindre budget.</p>
-        <div class="svc-body" id="svc-conseil" hidden><ul><li data-i18n="k47">Diagnostic de maturité numérique</li><li data-i18n="k48">Feuille de route chiffrée en dinars</li><li data-i18n="k49">Choix de logiciels et cahiers des charges</li><li data-i18n="k50">Pilotage des projets de transformation</li></ul></div>
-      </li>
-      <li class="svc">
-        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-code">
-          <span class="svc-title" data-i18n="k57">Ingénierie logicielle</span>
-          <span class="svc-plus" aria-hidden="true"></span>
-        </button>
-        <p class="svc-lede" data-i18n="k58">ERP, CRM, applications web et mobiles, bilingues arabe-français, conçus pour les règles algériennes.</p>
-        <div class="svc-body" id="svc-code" hidden><ul><li data-i18n="k53">ERP et gestion commerciale</li><li data-i18n="k54">Facturation et comptabilité conformes au SCF</li><li data-i18n="k55">Paie conforme CNAS et IRG</li><li data-i18n="k56">E-commerce avec paiement CIB et Edahabia</li></ul></div>
-      </li>
-      <li class="svc">
-        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-formation">
-          <span class="svc-title" data-i18n="k63">Formation et accompagnement</span>
-          <span class="svc-plus" aria-hidden="true"></span>
-        </button>
-        <p class="svc-lede" data-i18n="k64">Un outil ne sert que s’il est adopté. Nous formons vos équipes sur site ou à distance, en français ou en arabe.</p>
-        <div class="svc-body" id="svc-formation" hidden><ul><li data-i18n="k59">Parcours de formation par métier</li><li data-i18n="k60">Microsoft 365, Excel et Power BI</li><li data-i18n="k61">Formation aux logiciels livrés</li><li data-i18n="k62">Supports en français et en arabe</li></ul></div>
-      </li>
-      <li class="svc">
-        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-outsourcing">
-          <span class="svc-title" data-i18n="k69">Infogérance et support</span>
-          <span class="svc-plus" aria-hidden="true"></span>
-        </button>
-        <p class="svc-lede" data-i18n="k70">Nous prenons en charge votre informatique au quotidien, avec des engagements de service écrits.</p>
-        <div class="svc-body" id="svc-outsourcing" hidden><ul><li data-i18n="k65">Support utilisateurs et assistance</li><li data-i18n="k66">Infogérance des serveurs</li><li data-i18n="k67">Supervision et sauvegardes</li><li data-i18n="k68">Équipes de développement dédiées</li></ul></div>
-      </li>
-      <li class="svc">
-        <button class="svc-head" type="button" aria-expanded="false" aria-controls="svc-materiel">
-          <span class="svc-title" data-i18n="k75">Équipement et infrastructure</span>
-          <span class="svc-plus" aria-hidden="true"></span>
-        </button>
-        <p class="svc-lede" data-i18n="k76">Postes, réseaux, serveurs, hébergement : conseil, fourniture, installation et maintenance de tout votre parc.</p>
-        <div class="svc-body" id="svc-materiel" hidden><ul><li data-i18n="k71">Postes de travail et périphériques</li><li data-i18n="k72">Réseaux, Wi-Fi et sécurité</li><li data-i18n="k73">Serveurs et hébergement des données</li><li data-i18n="k74">Gestion et renouvellement du parc</li></ul></div>
-      </li>
-    </ul>
-  </div>
-</section>
-<section class="products sec sec-blue" id="realisations">
+<section class="why sec sec-ink" id="why">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <h2 class="h2" data-i18n="k89">Des logiciels pensés pour l’Algérie.</h2>
-      <p class="lede" data-i18n="k90">Quelques exemples d’écrans que nous concevons&nbsp;: bilingues, conformes aux règles algériennes, et agréables à utiliser au quotidien.</p>
+      <h2 class="h2" data-i18n="k93">Why ABBOUTE.</h2>
+      <p class="lede" data-i18n="k94">A family group with a simple rule: what we promise, we deliver.</p>
     </div>
-    <div class="gallery" id="gallery">
-      <div class="g-tabs" role="tablist" aria-label="Exemples de logiciels" data-i18n-attr="aria-label:k91"><button type="button" role="tab" id="tab-erp" aria-controls="pane-erp" aria-selected="true" tabindex="0"><b data-i18n="k79">ERP et gestion commerciale</b><span data-i18n="k80">Ventes, stock, achats et créances sur un seul écran, par wilaya, en dinars.</span><i class="tab-bar"><i></i></i></button><button type="button" role="tab" id="tab-inv" aria-controls="pane-inv" aria-selected="false" tabindex="-1"><b data-i18n="k81">Facturation conforme</b><span data-i18n="k82">Factures bilingues avec NIF, NIS, RC et article d’imposition, écritures SCF automatiques.</span><i class="tab-bar"><i></i></i></button><button type="button" role="tab" id="tab-pay" aria-controls="pane-pay" aria-selected="false" tabindex="-1"><b data-i18n="k83">Paie et ressources humaines</b><span data-i18n="k84">Bulletins conformes, cotisations CNAS et IRG calculées, déclarations prêtes.</span><i class="tab-bar"><i></i></i></button><button type="button" role="tab" id="tab-mob" aria-controls="pane-mob" aria-selected="false" tabindex="-1"><b data-i18n="k85">Application mobile terrain</b><span data-i18n="k86">Vos commerciaux et livreurs suivent leur tournée et encaissent depuis leur téléphone.</span><i class="tab-bar"><i></i></i></button><button type="button" role="tab" id="tab-shop" aria-controls="pane-shop" aria-selected="false" tabindex="-1"><b data-i18n="k87">E-commerce</b><span data-i18n="k88">Une boutique en ligne qui accepte CIB, Edahabia et le paiement à la livraison.</span><i class="tab-bar"><i></i></i></button></div>
-      <div class="g-stage"><div class="pane on" role="tabpanel" id="pane-erp" aria-labelledby="tab-erp"><div class="dev desk"><div class="dev-bar"><i></i><i></i><i></i><span>app.abboute.com</span></div><div class="dev-screen">
-  <div class="m-app">
-    <aside class="m-side"><b class="m-logo">Atlas Distribution</b>
-      <span class="on">Tableau de bord <em>لوحة القيادة</em></span><span>Ventes <em>المبيعات</em></span><span>Stock <em>المخزون</em></span><span>Achats <em>المشتريات</em></span><span>Clients <em>الزبائن</em></span></aside>
-    <div class="m-main">
-      <div class="m-head"><b>Tableau de bord</b><span>Novembre 2026</span></div>
-      <div class="m-kpis">
-        <div><span>Chiffre d’affaires</span><b>12 480 000 DA</b><i class="up">+14 %</i></div>
-        <div><span>Commandes</span><b>386</b><i class="up">+9 %</i></div>
-        <div><span>Créances</span><b>2 140 000 DA</b><i class="dn">-6 %</i></div>
-        <div><span>Ruptures</span><b>3</b><i class="warn">à traiter</i></div>
-      </div>
-      <div class="m-row">
-        <div class="m-card m-chart"><span>Ventes par wilaya</span>
-          <div class="bars"><i style="--h:.92"></i><i style="--h:.64"></i><i style="--h:.71"></i><i style="--h:.45"></i><i style="--h:.38"></i><i style="--h:.29"></i></div>
-          <div class="bl"><em>Alger</em><em>Oran</em><em>Blida</em><em>Sétif</em><em>Béjaïa</em><em>Annaba</em></div></div>
-        <div class="m-card"><span>Stock à surveiller</span>
-          <ul class="m-list"><li>Huile 5 L <b class="warn">42</b></li><li>Semoule 25 kg <b class="warn">18</b></li><li>Café 250 g <b>310</b></li><li>Sucre 1 kg <b>1 240</b></li></ul></div>
-      </div>
-    </div>
-  </div></div></div></div><div class="pane" role="tabpanel" id="pane-inv" aria-labelledby="tab-inv"><div class="dev desk"><div class="dev-bar"><i></i><i></i><i></i><span>app.abboute.com</span></div><div class="dev-screen">
-  <div class="m-inv">
-    <div class="inv-top"><div><b>Atlas Distribution SARL</b><span>Zone industrielle, Rouiba, Alger</span><span>NIF 001216099876543 · NIS 001216010203040</span><span>RC 16/00-0123456B21 · AI 16012345678</span></div>
-      <div class="inv-t"><b>Facture <em>فاتورة</em></b><span>N° FA-2026-0412</span><span>18/11/2026</span></div></div>
-    <div class="inv-client"><span>Client <em>الزبون</em></span><b>Sarl Tassili Équipements, Oran</b></div>
-    <table><thead><tr><th>Désignation</th><th>Qté</th><th>P.U. HT</th><th>Montant HT</th></tr></thead>
-      <tbody><tr><td>Licence ERP, 10 utilisateurs</td><td>1</td><td>850 000,00</td><td>850 000,00</td></tr>
-      <tr><td>Formation des équipes (jours)</td><td>4</td><td>45 000,00</td><td>180 000,00</td></tr></tbody></table>
-    <div class="inv-tot"><div><span>Total HT</span><b>1 030 000,00 DA</b></div><div><span>TVA 19 %</span><b>195 700,00 DA</b></div><div class="g"><span>Total TTC</span><b>1 225 700,00 DA</b></div></div>
-    <div class="inv-foot"><span class="ok">Écriture SCF générée</span><span>Paiement : virement ou CIB</span></div>
-  </div></div></div></div><div class="pane" role="tabpanel" id="pane-pay" aria-labelledby="tab-pay"><div class="dev desk"><div class="dev-bar"><i></i><i></i><i></i><span>app.abboute.com</span></div><div class="dev-screen">
-  <div class="m-pay">
-    <div class="pay-head"><div><b>Bulletin de paie <em>كشف الراتب</em></b><span>Novembre 2026</span></div><span class="ok">Validé</span></div>
-    <div class="pay-emp"><div><span>Salarié</span><b>Yacine B.</b></div><div><span>Poste</span><b>Responsable commercial</b></div><div><span>N° sécurité sociale</span><b>16 81 0412 3456 78</b></div></div>
-    <table><tbody>
-      <tr><td>Salaire de base</td><td>95 000,00</td></tr>
-      <tr><td>IEP (expérience)</td><td>7 600,00</td></tr>
-      <tr><td>Prime de rendement</td><td>12 000,00</td></tr>
-      <tr class="sub"><td>Retenue CNAS 9 %</td><td>-10 314,00</td></tr>
-      <tr class="sub"><td>IRG</td><td>-14 870,00</td></tr>
-    </tbody></table>
-    <div class="pay-net"><span>Net à payer <em>الصافي للدفع</em></span><b>89 416,00 DA</b></div>
-  </div></div></div></div><div class="pane" role="tabpanel" id="pane-mob" aria-labelledby="tab-mob"><div class="dev phone"><div class="phone-notch"></div><div class="dev-screen">
-  <div class="m-mob">
-    <div class="mob-top"><span>Tournée du jour</span><b>Karim, commercial</b></div>
-    <div class="mob-map"><i style="--x:30%;--y:40%"></i><i style="--x:58%;--y:28%"></i><i class="on" style="--x:68%;--y:62%"></i><i style="--x:42%;--y:72%"></i><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 40 L58 28 L68 62 L42 72"/></svg></div>
-    <ul class="mob-list">
-      <li class="done"><b>Supérette El Baraka</b><span>Bab Ezzouar, livré</span></li>
-      <li class="cur"><b>Grossiste Ouled Moussa</b><span>Boumerdès, 14 h 30</span></li>
-      <li><b>Pharmacie Ennour</b><span>Rouiba, 16 h 00</span></li>
-    </ul>
-    <button type="button" tabindex="-1">Encaisser 48 500 DA</button>
-  </div></div></div></div><div class="pane" role="tabpanel" id="pane-shop" aria-labelledby="tab-shop"><div class="dev desk"><div class="dev-bar"><i></i><i></i><i></i><span>app.abboute.com</span></div><div class="dev-screen">
-  <div class="m-shop">
-    <div class="shop-nav"><b>Maison Nour</b><span>Dattes</span><span>Coffrets</span><span>Livraison 58 wilayas</span><em>Panier (2)</em></div>
-    <div class="shop-body">
-      <div class="shop-img"><i></i></div>
-      <div class="shop-info"><span>Deglet Nour, Biskra</span><b>Coffret prestige 1 kg</b><strong>3 900 DA</strong>
-        <div class="shop-pay"><span>Payer par</span><em>CIB</em><em>Edahabia</em><em>À la livraison</em></div>
-        <button type="button" tabindex="-1">Commander</button></div>
-    </div>
-  </div></div></div></div></div>
-    </div>
-    <p class="g-note" data-i18n="k92">Exemples d’interfaces avec des données fictives.</p>
+    <div class="why-grid" data-reveal-list><article class="why-item"><h3 data-i18n="k85">One contract, end to end</h3><p data-i18n="k86">Sourcing, transport, customs and delivery under a single responsibility.</p></article><article class="why-item"><h3 data-i18n="k87">A foot on each shore</h3><p data-i18n="k88">An entity in Europe and an entity in Algeria, so every deal is handled locally.</p></article><article class="why-item"><h3 data-i18n="k89">Checked before it ships</h3><p data-i18n="k90">We inspect goods at the supplier, so there are no surprises on arrival.</p></article><article class="why-item"><h3 data-i18n="k91">Payment made simple</h3><p data-i18n="k92">Euros in Europe, dinars in Algeria, with secured payment terms.</p></article></div>
   </div>
 </section>
-<section class="europe sec" id="europe">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <h2 class="h2" data-i18n="k101">Pourquoi l’expertise européenne&nbsp;?</h2>
-      <p class="lede" data-i18n="k102">Le niveau d’exigence des grands groupes, sans quitter l’Algérie.</p>
-    </div>
-    <div class="why-grid2" data-reveal-list><article class="why-item"><h3 data-i18n="k93">Des méthodes éprouvées</h3><p data-i18n="k94">Gestion de projet, documentation, tests&nbsp;: chaque étape suit les standards des grands groupes européens.</p></article><article class="why-item"><h3 data-i18n="k95">Vos données protégées</h3><p data-i18n="k96">Hébergement et traitements conformes à la loi 18-07 modifiée sur les données personnelles, avec les bonnes pratiques européennes.</p></article><article class="why-item"><h3 data-i18n="k97">Une équipe à côté de vous</h3><p data-i18n="k98">Un chef de projet à Alger, qui parle votre langue et connaît vos contraintes, appuyé par nos ingénieurs de Varsovie.</p></article><article class="why-item"><h3 data-i18n="k99">Un contrat en dinars</h3><p data-i18n="k100">Vous signez et payez en dinars avec ABBOUTE Algérie. Aucune démarche de change, aucune surprise.</p></article></div>
-  </div>
-</section>
-<section class="engagement sec sec-ink" id="engagement">
-  <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <h2 class="h2" data-i18n="k126">Travaillons ensemble, à votre façon.</h2>
-      <p class="lede" data-i18n="k127">Les modèles des grandes ESN européennes, avec un contrat et une facturation en dinars par ABBOUTE Algérie.</p>
-    </div>
-    <div class="eng-grid" data-reveal-list><article class="eng"><h3 data-i18n="k104">Projet au forfait</h3><p data-i18n="k105">Un périmètre, un prix et une date de livraison fixés à l’avance. Nous portons le risque du résultat.</p><p class="eng-fit"><span data-i18n="k103">Adapté à</span> <em data-i18n="k106">Nouveau logiciel, déploiement d’ERP</em></p></article><article class="eng"><h3 data-i18n="k107">Équipe dédiée</h3><p data-i18n="k108">Des développeurs, testeurs et chefs de projet qui travaillent pour vous, avec vos outils et vos priorités.</p><p class="eng-fit"><span data-i18n="k103">Adapté à</span> <em data-i18n="k109">Produits en évolution continue</em></p></article><article class="eng"><h3 data-i18n="k110">Assistance technique</h3><p data-i18n="k111">Un ou plusieurs experts rejoignent vos équipes aussi longtemps que nécessaire, sur site ou à distance.</p><p class="eng-fit"><span data-i18n="k103">Adapté à</span> <em data-i18n="k112">Renfort ponctuel, compétence rare</em></p></article><article class="eng"><h3 data-i18n="k113">Infogérance</h3><p data-i18n="k114">Nous exploitons et maintenons tout ou partie de votre informatique, avec des délais d’intervention contractuels.</p><p class="eng-fit"><span data-i18n="k103">Adapté à</span> <em data-i18n="k115">Support, serveurs, parc informatique</em></p></article></div>
-    <div class="sub-head" data-reveal><h3 class="h3" data-i18n="k128">Comment se déroule un projet</h3></div>
-    <ol class="steps" id="steps" data-reveal-list><li class="step"><span class="step-n">1</span><h3 data-i18n="k116">Diagnostic</h3><p data-i18n="k117">Nous observons vos processus, vos outils et vos équipes pour comprendre d’où vous partez.</p></li><li class="step"><span class="step-n">2</span><h3 data-i18n="k118">Feuille de route</h3><p data-i18n="k119">Chaque chantier classé par impact et par coût, avec un budget en dinars et un calendrier.</p></li><li class="step"><span class="step-n">3</span><h3 data-i18n="k120">Mise en œuvre</h3><p data-i18n="k121">Logiciels, matériel et intégrations livrés par étapes, testés avec vous.</p></li><li class="step"><span class="step-n">4</span><h3 data-i18n="k122">Formation</h3><p data-i18n="k123">Chaque équipe apprend ses nouveaux outils, en français ou en arabe.</p></li><li class="step"><span class="step-n">5</span><h3 data-i18n="k124">Accompagnement</h3><p data-i18n="k125">Support, maintenance et évolutions, avec des engagements de service écrits.</p></li></ol>
-  </div>
-</section>
-<section class="contact sec sec-ink" id="contact">
+<section class="contact sec" id="contact">
   <div class="wrap cfg-grid">
     <div class="cfg-left">
-      <h2 class="h2" data-i18n="k136">Parlons de votre entreprise.</h2>
-      <p class="lede" data-i18n="k137">Quatre questions rapides, puis vos coordonnées. Votre brief s’écrit à mesure que vous répondez, et un chef de projet à Alger vous recontacte.</p>
+      <h2 class="h2" data-i18n="k102">Tell us what you need.</h2>
+      <p class="lede" data-i18n="k103">Four quick questions, then your details. Your request writes itself as you answer.</p>
       <article class="brief" id="brief" aria-live="polite">
-        <header><span class="brief-ref" id="briefRef">Brief AT</span><span class="brief-state" id="briefState" data-i18n="k138">En cours</span></header>
+        <header><span class="brief-ref" id="briefRef">AB</span><span class="brief-state" id="briefState" data-i18n="k104">In progress</span></header>
         <dl>
-          <div data-b="need"><dt data-i18n="k139">Besoin</dt><dd data-i18n="k135">À préciser</dd></div>
-          <div data-b="stage"><dt data-i18n="k140">Situation</dt><dd data-i18n="k135">À préciser</dd></div>
-          <div data-b="size"><dt data-i18n="k141">Entreprise</dt><dd data-i18n="k135">À préciser</dd></div>
-          <div data-b="when"><dt data-i18n="k142">Démarrage</dt><dd data-i18n="k135">À préciser</dd></div>
-          <div data-b="who"><dt data-i18n="k143">Contact</dt><dd data-i18n="k135">À préciser</dd></div>
+          <div data-b="need"><dt data-i18n="k105">Division</dt><dd data-i18n="k101">To be defined</dd></div>
+          <div data-b="stage"><dt data-i18n="k106">Direction</dt><dd data-i18n="k101">To be defined</dd></div>
+          <div data-b="size"><dt data-i18n="k107">Request</dt><dd data-i18n="k101">To be defined</dd></div>
+          <div data-b="when"><dt data-i18n="k108">Timing</dt><dd data-i18n="k101">To be defined</dd></div>
+          <div data-b="who"><dt data-i18n="k109">Contact</dt><dd data-i18n="k101">To be defined</dd></div>
         </dl>
         <div class="brief-bar"><i id="briefBar"></i></div>
       </article>
       <div class="direct">
-        <p data-i18n="k144">Vous préférez écrire directement&nbsp;?</p>
-        <button type="button" class="copy-mail" id="copyMail" data-mail="contact@abboute.com"><bdi>contact@abboute.com</bdi> <span data-i18n="k145">Copier</span></button>
+        <p data-i18n="k110">Rather write to us directly?</p>
+        <button type="button" class="copy-mail" id="copyMail" data-mail="contact@abboute.com">contact@abboute.com <span data-i18n="k111">Copy</span></button>
       </div>
     </div>
     <form class="cfg" id="cfg" novalidate>
-      <div class="cfg-top"><button type="button" class="cfg-back" id="cfgBack" aria-label="Question précédente" data-i18n-attr="aria-label:k146" disabled><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
+      <div class="cfg-top"><button type="button" class="cfg-back" id="cfgBack" aria-label="Previous question" data-i18n-attr="aria-label:k112" disabled><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5"/></svg></button>
         <div class="cfg-prog" aria-hidden="true"><i id="cfgProg"></i></div><span class="cfg-count" id="cfgCount">1 / 5</span></div>
       <fieldset class="cfg-step on" data-step="need">
-        <legend data-i18n="k147">De quoi avez-vous besoin&nbsp;?</legend>
-        <p class="cfg-hint" data-i18n="k148">Plusieurs choix possibles.</p>
-        <div class="tiles"><label class="tile"><input type="checkbox" name="need" value="conseil"><span class="tile-in"><kbd>1</kbd><svg viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg><b data-i18n="k129">Conseil et transformation</b></span></label><label class="tile"><input type="checkbox" name="need" value="code"><span class="tile-in"><kbd>2</kbd><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4m8-8l4 4-4 4M13.5 5l-3 14"/></svg><b data-i18n="k130">Logiciel (ERP, CRM, paie, mobile)</b></span></label><label class="tile"><input type="checkbox" name="need" value="formation"><span class="tile-in"><kbd>3</kbd><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg><b data-i18n="k131">Formation</b></span></label><label class="tile"><input type="checkbox" name="need" value="outsourcing"><span class="tile-in"><kbd>4</kbd><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6m1-5.5c3 0 5 2 5 5"/></svg><b data-i18n="k132">Infogérance et support</b></span></label><label class="tile"><input type="checkbox" name="need" value="materiel"><span class="tile-in"><kbd>5</kbd><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8m-4-4v4"/></svg><b data-i18n="k133">Matériel et infrastructure</b></span></label><label class="tile"><input type="checkbox" name="need" value="aide"><span class="tile-in"><kbd>6</kbd><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17.5h.01"/></svg><b data-i18n="k134">Je ne sais pas encore, conseillez-moi</b></span></label></div>
-        <button type="button" class="btn btn-primary cfg-next" disabled data-i18n="k149">Continuer</button>
+        <legend data-i18n="k113">Which division?</legend>
+        <p class="cfg-hint" data-i18n="k114">Pick as many as you like.</p>
+        <div class="tiles"><label class="tile"><input type="checkbox" name="need" value="trading"><span class="tile-in"><kbd>1</kbd><b>ABBOUTE Trading</b><em data-i18n="k95">Sourcing & import-export</em></span></label><label class="tile"><input type="checkbox" name="need" value="build"><span class="tile-in"><kbd>2</kbd><b>ABBOUTE Build</b><em data-i18n="k96">Construction & machinery</em></span></label><label class="tile"><input type="checkbox" name="need" value="agro"><span class="tile-in"><kbd>3</kbd><b>ABBOUTE Agro</b><em data-i18n="k97">Food & agriculture</em></span></label><label class="tile"><input type="checkbox" name="need" value="industries"><span class="tile-in"><kbd>4</kbd><b>ABBOUTE Industries</b><em data-i18n="k98">Industry</em></span></label><label class="tile"><input type="checkbox" name="need" value="tech"><span class="tile-in"><kbd>5</kbd><b>ABBOUTE Tech &amp; Finance</b><em data-i18n="k99">Technology & finance</em></span></label><label class="tile"><input type="checkbox" name="need" value="fashion"><span class="tile-in"><kbd>6</kbd><b>Maison Ilyane</b><em data-i18n="k100">Fashion & beauty</em></span></label></div>
+        <button type="button" class="btn btn-primary cfg-next" disabled data-i18n="k115">Continue</button>
       </fieldset>
       <fieldset class="cfg-step" data-step="stage">
-        <legend data-i18n="k150">Où en est votre projet&nbsp;?</legend>
-        <div class="opts"><label class="opt"><input type="radio" name="stage" value="0"><span><kbd>1</kbd><em data-i18n="k151">Une idée à explorer</em></span></label><label class="opt"><input type="radio" name="stage" value="1"><span><kbd>2</kbd><em data-i18n="k152">Un besoin précis</em></span></label><label class="opt"><input type="radio" name="stage" value="2"><span><kbd>3</kbd><em data-i18n="k153">Une urgence</em></span></label></div>
+        <legend data-i18n="k116">Which direction?</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="stage" value="0"><span><kbd>1</kbd><em data-i18n="k117">Europe → Algeria</em></span></label><label class="opt"><input type="radio" name="stage" value="1"><span><kbd>2</kbd><em data-i18n="k118">Algeria → Europe</em></span></label><label class="opt"><input type="radio" name="stage" value="2"><span><kbd>3</kbd><em data-i18n="k119">Both</em></span></label></div>
       </fieldset>
       <fieldset class="cfg-step" data-step="size">
-        <legend data-i18n="k154">Quelle est la taille de votre entreprise&nbsp;?</legend>
-        <div class="opts"><label class="opt"><input type="radio" name="size" value="0"><span><kbd>1</kbd><em data-i18n="k155">1 à 10 personnes</em></span></label><label class="opt"><input type="radio" name="size" value="1"><span><kbd>2</kbd><em data-i18n="k156">11 à 50 personnes</em></span></label><label class="opt"><input type="radio" name="size" value="2"><span><kbd>3</kbd><em data-i18n="k157">51 à 250 personnes</em></span></label><label class="opt"><input type="radio" name="size" value="3"><span><kbd>4</kbd><em data-i18n="k158">Plus de 250 personnes</em></span></label></div>
+        <legend data-i18n="k120">What kind of request?</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="size" value="0"><span><kbd>1</kbd><em data-i18n="k121">A price quote</em></span></label><label class="opt"><input type="radio" name="size" value="1"><span><kbd>2</kbd><em data-i18n="k122">A firm order</em></span></label><label class="opt"><input type="radio" name="size" value="2"><span><kbd>3</kbd><em data-i18n="k123">Regular supply</em></span></label></div>
       </fieldset>
       <fieldset class="cfg-step" data-step="when">
-        <legend data-i18n="k159">Quand souhaitez-vous démarrer&nbsp;?</legend>
-        <div class="opts"><label class="opt"><input type="radio" name="when" value="0"><span><kbd>1</kbd><em data-i18n="k160">Dès que possible</em></span></label><label class="opt"><input type="radio" name="when" value="1"><span><kbd>2</kbd><em data-i18n="k161">Dans 1 à 3 mois</em></span></label><label class="opt"><input type="radio" name="when" value="2"><span><kbd>3</kbd><em data-i18n="k162">Plus tard, je me renseigne</em></span></label></div>
+        <legend data-i18n="k124">When do you need it?</legend>
+        <div class="opts"><label class="opt"><input type="radio" name="when" value="0"><span><kbd>1</kbd><em data-i18n="k125">As soon as possible</em></span></label><label class="opt"><input type="radio" name="when" value="1"><span><kbd>2</kbd><em data-i18n="k126">Within 1 to 3 months</em></span></label><label class="opt"><input type="radio" name="when" value="2"><span><kbd>3</kbd><em data-i18n="k127">Later, I’m planning ahead</em></span></label></div>
       </fieldset>
       <fieldset class="cfg-step" data-step="who">
-        <legend data-i18n="k163">Où vous envoyer notre réponse&nbsp;?</legend>
+        <legend data-i18n="k128">Where should we answer?</legend>
         <div class="cfg-fields">
-          <div class="field"><input id="cf-name" name="name" required placeholder=" " autocomplete="name"><label for="cf-name" data-i18n="k164">Nom et prénom</label></div>
-          <div class="field"><input id="cf-mail" name="email" type="email" required placeholder=" " autocomplete="email" dir="ltr"><label for="cf-mail" data-i18n="k165">E-mail professionnel</label></div>
-          <div class="field"><input id="cf-tel" name="phone" type="tel" placeholder=" " autocomplete="tel" dir="ltr"><label for="cf-tel" data-i18n="k166">Téléphone (facultatif)</label></div>
-          <div class="field"><input id="cf-co" name="company" placeholder=" " autocomplete="organization"><label for="cf-co" data-i18n="k167">Entreprise et wilaya</label></div>
+          <div class="field"><input id="cf-name" name="name" required placeholder=" " autocomplete="name"><label for="cf-name" data-i18n="k129">Full name</label></div>
+          <div class="field"><input id="cf-mail" name="email" type="email" required placeholder=" " autocomplete="email"><label for="cf-mail" data-i18n="k130">Work email</label></div>
+          <div class="field"><input id="cf-tel" name="phone" type="tel" placeholder=" " autocomplete="tel"><label for="cf-tel" data-i18n="k131">Phone (optional)</label></div>
+          <div class="field"><input id="cf-co" name="company" placeholder=" " autocomplete="organization"><label for="cf-co" data-i18n="k132">Company and country</label></div>
         </div>
-        <button type="submit" class="btn btn-primary cfg-next" data-i18n="k168">Générer mon brief</button>
+        <button type="submit" class="btn btn-primary cfg-next" data-i18n="k133">Create my request</button>
         <p class="cfg-err" id="cfgErr" role="alert"></p>
       </fieldset>
       <div class="cfg-step cfg-done" data-step="done" tabindex="-1">
         <svg class="done-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
-        <h3 data-i18n="k169">Votre brief est prêt.</h3>
-        <p data-i18n="k170">Dernière étape&nbsp;: votre messagerie s’ouvre avec tout prérempli.</p>
+        <h3 data-i18n="k134">Your request is ready.</h3>
+        <p data-i18n="k135">One last step: your email app opens with everything filled in.</p>
         <dl class="done-sum" id="doneSum"></dl>
         <div class="done-actions">
-          <a class="btn btn-primary" id="cfgSend" href="#" data-i18n="k171">Envoyer le brief</a>
-          <button type="button" class="btn btn-secondary" id="cfgCopy" data-i18n="k172">Copier le brief</button>
+          <a class="btn btn-primary" id="cfgSend" href="#" data-i18n="k136">Send the request</a>
+          <button type="button" class="btn btn-secondary" id="cfgCopy" data-i18n="k137">Copy the request</button>
         </div>
-        <button class="cfg-restart" type="button" id="cfgEdit" data-i18n="k173">Modifier mes réponses</button>
+        <button class="cfg-restart" type="button" id="cfgEdit" data-i18n="k138">Edit my answers</button>
       </div>
-      <p class="cfg-keys" aria-hidden="true" data-i18n="k174">Astuce&nbsp;: répondez avec les touches <kbd>1</kbd> à <kbd>6</kbd>, validez avec <kbd>Entrée</kbd>.</p>
+      <p class="cfg-keys" aria-hidden="true" data-i18n="k139">Tip: answer with keys <kbd>1</kbd> to <kbd>6</kbd>, confirm with <kbd>Enter</kbd>.</p>
     </form>
   </div>
 </section>
 </main>
-<a href="#contact" class="mob-cta btn btn-primary" id="mobCta"><span data-i18n="k9">Lancer votre projet</span> <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5"/></svg></a>
+<a href="#contact" class="mob-cta btn btn-primary" id="mobCta"><span data-i18n="k5">Start a request</span> <svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5"/></svg></a>
 <footer class="footer">
   <div class="wrap foot-cols">
-    <div class="foot-brand"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">ABBOUTE<small>Technologies</small></span>
-      <p data-i18n="k175">L’expertise informatique européenne au service des entreprises algériennes.</p></div>
-    <nav class="foot-col" aria-label="Pied de page" data-i18n-attr="aria-label:k176"><span class="fh" data-i18n="k177">Le groupe</span><a href="#services" data-i18n="k1">Services</a><a href="#realisations" data-i18n="k2">Réalisations</a><a href="#europe" data-i18n="k3">Pourquoi l'Europe</a><a href="#engagement" data-i18n="k4">Collaborer</a></nav>
-    <div class="foot-col"><span class="fh" data-i18n="k178">Bureaux</span><span data-i18n="k179">ABBOUTE Algérie, Alger</span><span data-i18n="k180">ABBOUTE Europe, Varsovie</span></div>
-    <div class="foot-col"><span class="fh" data-i18n="k181">Contact</span><a href="mailto:contact@abboute.com"><bdi>contact@abboute.com</bdi></a><a href="#contact" data-i18n="k5">Lancer un projet</a></div>
+    <div class="foot-brand"><svg class="brand-mark"><use href="#mark"/></svg><span class="brand-word">ABBOUTE<small>Global Trading</small></span>
+      <p data-i18n="k140">Europe and Algeria, one group.</p></div>
+    <div class="foot-col"><span class="fh" data-i18n="k141">Divisions</span><span>ABBOUTE Trading</span><span>ABBOUTE Build</span><span>ABBOUTE Agro</span><span>ABBOUTE Industries</span><span>ABBOUTE Tech &amp; Finance</span><span>Maison Ilyane</span></div>
+    <div class="foot-col"><span class="fh" data-i18n="k142">Offices</span><span data-i18n="k143">ABBOUTE Algeria, Algiers</span><span data-i18n="k144">ABBOUTE Europe, Warsaw</span></div>
+    <div class="foot-col"><span class="fh">Contact</span><a href="mailto:contact@abboute.com">contact@abboute.com</a><a href="#contact" data-i18n="k5">Start a request</a></div>
   </div>
   <div class="foot-giant" aria-hidden="true">ABBOUTE</div>
-  <div class="wrap foot-base"><span>© 2026 ABBOUTE Technologies</span><span data-i18n="k182">Alger, Varsovie</span></div>
+  <div class="wrap foot-base"><span>© 2026 ABBOUTE Global Trading</span><span data-i18n="k145">Algiers, Warsaw</span></div>
 </footer>
 </body>
 </html>

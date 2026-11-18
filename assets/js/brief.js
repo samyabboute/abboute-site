@@ -1,10 +1,10 @@
-/* ABBOUTE Technologies : configurateur de projet. Quatre questions, un brief prêt à envoyer. Bilingue. */
+/* ABBOUTE Global Trading : configurateur de demande. Quatre questions, une demande prête à envoyer. EN, FR, DE. */
 (function(){
 'use strict';
 var form = document.getElementById('cfg');
 if(!form) return;
 var gsap = window.gsap, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-var t = function(fr, en, ar){ return window.NX ? NX.t(fr, en, ar) : fr; };
+var t = function(en, fr, de){ return window.NX ? NX.t(en, fr, de) : en; };
 var steps = [].slice.call(form.querySelectorAll('.cfg-step'));
 var order = ['need','stage','size','when','who','done'];
 var prog = document.getElementById('cfgProg'), count = document.getElementById('cfgCount');
@@ -14,11 +14,11 @@ var info = { name: '', email: '', phone: '', company: '' };
 var cur = 0, busy = false, inView = false, ready = false;
 
 var d = new Date();
-var ref = 'AT-' + String(d.getDate()).padStart(2,'0') + String(d.getMonth()+1).padStart(2,'0') + '-' + Math.floor(1000 + Math.random()*9000);
-document.getElementById('briefRef').textContent = 'Brief ' + ref;
+var ref = 'AB-' + String(d.getDate()).padStart(2,'0') + String(d.getMonth()+1).padStart(2,'0') + '-' + Math.floor(1000 + Math.random()*9000);
+document.getElementById('briefRef').textContent = ref;
 
 /* Réponses lues depuis les libellés : elles suivent la langue affichée */
-function labelOf(inp){ var el = inp.closest('label').querySelector('b, em'); return el ? el.textContent.trim() : inp.value; }
+function labelOf(inp){ var el = inp.closest('label').querySelector(inp.type === 'checkbox' ? 'b' : 'em'); return el ? el.textContent.trim() : inp.value; }
 function answers(){
   var a = {};
   a.need = [].slice.call(form.querySelectorAll('[name=need]:checked')).map(labelOf).join(', ');
@@ -31,12 +31,12 @@ function paint(flashKey){
   ['need','stage','size','when','who'].forEach(function(key){
     var row = brief.querySelector('[data-b="' + key + '"]'), dd = row.querySelector('dd');
     var v = a[key];
-    dd.textContent = v || t('À préciser', 'To be defined', 'يُحدَّد لاحقاً');
+    dd.textContent = v || t('To be defined', 'À préciser', 'Offen');
     row.classList.toggle('set', !!v); if(v) filled++;
     if(key === flashKey && v){ row.classList.remove('flash'); void row.offsetWidth; row.classList.add('flash'); }
   });
   bar.style.width = (filled / 5 * 100) + '%';
-  document.getElementById('briefState').textContent = ready ? t('Prêt', 'Ready', 'جاهز') : t('En cours', 'In progress', 'قيد الإعداد');
+  document.getElementById('briefState').textContent = ready ? t('Ready', 'Prête', 'Fertig') : t('In progress', 'En cours', 'In Arbeit');
 }
 
 function show(i, dir){
@@ -59,7 +59,7 @@ function show(i, dir){
 function ui(){
   var isDone = order[cur] === 'done';
   prog.style.width = ((isDone ? 5 : cur) / 5 * 100) + '%';
-  count.textContent = isDone ? t('Terminé', 'Done', 'تمّ') : (Math.min(cur, 4) + 1) + ' / 5';
+  count.textContent = isDone ? t('Done', 'Terminé', 'Fertig') : (Math.min(cur, 4) + 1) + ' / 5';
   back.disabled = cur === 0;
   form.classList.toggle('is-done', isDone);
 }
@@ -87,19 +87,19 @@ needBtn.addEventListener('click', next);
 function text(){
   var a = answers();
   return [
-    'Brief ' + ref, '',
-    t('Besoin : ', 'Need: ', 'الحاجة: ') + (a.need || '-'),
-    t('Situation : ', 'Stage: ', 'الوضعية: ') + (a.stage || '-'),
-    t('Taille : ', 'Company size: ', 'حجم المؤسسة: ') + (a.size || '-'),
-    t('Démarrage : ', 'Start: ', 'الانطلاق: ') + (a.when || '-'), '',
-    t('Contact : ', 'Contact: ', 'الاتصال: ') + info.name + (info.company ? ', ' + info.company : ''),
-    t('E-mail : ', 'Email: ', 'البريد: ') + info.email,
-    info.phone ? t('Téléphone : ', 'Phone: ', 'الهاتف: ') + info.phone : ''
+    t('Request ', 'Demande ', 'Anfrage ') + ref, '',
+    t('Division: ', 'Division : ', 'Bereich: ') + (a.need || '-'),
+    t('Direction: ', 'Sens : ', 'Richtung: ') + (a.stage || '-'),
+    t('Request type: ', 'Type de demande : ', 'Art der Anfrage: ') + (a.size || '-'),
+    t('Timing: ', 'Délai : ', 'Zeitpunkt: ') + (a.when || '-'), '',
+    t('Contact: ', 'Contact : ', 'Kontakt: ') + info.name + (info.company ? ', ' + info.company : ''),
+    t('Email: ', 'E-mail : ', 'E-Mail: ') + info.email,
+    info.phone ? t('Phone: ', 'Téléphone : ', 'Telefon: ') + info.phone : ''
   ].filter(function(x, i, arr){ return x !== '' || (arr[i-1] !== '' && i < arr.length - 1); }).join('\n').trim();
 }
 function finalize(){
   var a = answers();
-  document.getElementById('cfgSend').href = 'mailto:contact@abboute.com?subject=' + encodeURIComponent('Brief ' + ref + ' : ' + a.need) + '&body=' + encodeURIComponent(text());
+  document.getElementById('cfgSend').href = 'mailto:contact@abboute.com?subject=' + encodeURIComponent(t('Request ', 'Demande ', 'Anfrage ') + ref + ' : ' + a.need) + '&body=' + encodeURIComponent(text());
   document.getElementById('doneSum').innerHTML = brief.querySelector('dl').innerHTML;
 }
 
@@ -111,9 +111,9 @@ form.addEventListener('submit', function(e){
   if(!/^\S+@\S+\.\S+$/.test(info.email)) bad.push('email');
   bad.forEach(function(key){ form.elements[key].closest('.field').classList.add('err'); });
   if(bad.length){
-    err.textContent = bad.length === 2 ? t('Indiquez votre nom et une adresse e-mail valide.', 'Please add your name and a valid email address.', 'يرجى إدخال اسمكم وبريد إلكتروني صحيح.')
-      : bad[0] === 'name' ? t('Indiquez votre nom.', 'Please add your name.', 'يرجى إدخال اسمكم.')
-      : t('Indiquez une adresse e-mail valide, par exemple nom@entreprise.dz.', 'Please add a valid email address, for example name@company.com.', 'يرجى إدخال بريد إلكتروني صحيح، مثل name@company.dz.');
+    err.textContent = bad.length === 2 ? t('Please add your name and a valid email address.', 'Indiquez votre nom et une adresse e-mail valide.', 'Bitte geben Sie Ihren Namen und eine gültige E-Mail-Adresse an.')
+      : bad[0] === 'name' ? t('Please add your name.', 'Indiquez votre nom.', 'Bitte geben Sie Ihren Namen an.')
+      : t('Please add a valid email address, for example name@company.com.', 'Indiquez une adresse e-mail valide, par exemple nom@entreprise.com.', 'Bitte geben Sie eine gültige E-Mail-Adresse an, zum Beispiel name@firma.de.');
     form.elements[bad[0]].focus(); return;
   }
   err.textContent = '';
@@ -123,7 +123,7 @@ form.addEventListener('submit', function(e){
 
 document.getElementById('cfgCopy').addEventListener('click', function(){
   var b = this, txt = text();
-  var ok = function(){ b.textContent = t('Brief copié', 'Brief copied', 'تم نسخ الملخّص'); setTimeout(function(){ b.textContent = t('Copier le brief', 'Copy the brief', 'نسخ الملخّص'); }, 2000); };
+  var ok = function(){ b.textContent = t('Request copied', 'Demande copiée', 'Anfrage kopiert'); setTimeout(function(){ b.textContent = t('Copy the request', 'Copier la demande', 'Anfrage kopieren'); }, 2000); };
   if(navigator.clipboard) navigator.clipboard.writeText(txt).then(ok, function(){});
   else { var a = document.createElement('textarea'); a.value = txt; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); ok(); } catch(x){} a.remove(); }
 });

@@ -1,10 +1,10 @@
 {
-  "name": "ABBOUTE Technologies",
+  "name": "ABBOUTE Global Trading",
   "short_name": "ABBOUTE",
-  "description": "L'expertise informatique européenne au service des entreprises algériennes.",
+  "description": "Europe and Algeria, one group. Sourcing, construction, food, industry, technology and finance, fashion and beauty.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0b0d12",
+  "background_color": "#f5f6f8",
   "theme_color": "#0b0d12",
   "icons": [
     { "src": "/assets/icons/favicon-48.png", "sizes": "48x48", "type": "image/png" },
